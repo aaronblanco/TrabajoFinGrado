@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package uuid="moduloconversacionalpepper-733f25" version="0.0.0">
+ <names>
+  <name lang="en_US">MostrarSmartHome</name>
+  <name lang="es_ES">MostrarSmartHome</name>
+ </names>
+ <descriptions>
+  <description lang="es_ES">Esta aplicación sirve para mostrar la el laboratorio Smarthome de la Universidad de Almería (UAL).
+Esta aplicación se ejecutará en un robot Pepper Y20.
+</description>
+ </descriptions>
+ <supportedLanguages>
+  <language>es_ES</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+  <language>es_ES</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+ <requirements>
+  <naoqiRequirement/>
+  <robotRequirement model="JULIETTE_Y20"/>
+ </requirements>
+</package>
