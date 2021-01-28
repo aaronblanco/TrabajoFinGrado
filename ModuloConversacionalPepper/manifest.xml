@@ -10,6 +10,7 @@ Esta aplicación se ejecutará en un robot Pepper Y20.
 </description>
  </descriptions>
  <supportedLanguages>
+  <language>en_US</language>
   <language>es_ES</language>
  </supportedLanguages>
  <descriptionLanguages>
