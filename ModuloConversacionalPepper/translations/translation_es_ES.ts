@@ -9,10 +9,15 @@
             <translation type="vanished">Hola</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Hola, soy Pepper y voy a mostrar el laboratorio Smarthome de la universidad de Almería.</source>
             <comment>Text</comment>
-            <translation type="unfinished">Hola, soy Pepper y voy a mostrar el laboratorio Smarthome de la universidad de Almería.</translation>
+            <translation type="obsolete">Hola, soy Pepper y voy a mostrar el laboratorio Smarthome de la universidad de Almería.</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hello</source>
+            <comment>Text</comment>
+            <translation>Hola</translation>
         </message>
     </context>
     <context>
@@ -23,10 +28,15 @@
             <translation type="vanished">Hola</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Has elegido nada.</source>
             <comment>Text</comment>
-            <translation type="unfinished">Has elegido nada.</translation>
+            <translation type="obsolete">Has elegido nada.</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hello</source>
+            <comment>Text</comment>
+            <translation>Hola</translation>
         </message>
     </context>
     <context>
@@ -37,10 +47,9 @@
             <translation type="vanished">Hola</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Tienes más preguntas.</source>
             <comment>Text</comment>
-            <translation type="unfinished">Tienes más preguntas.</translation>
+            <translation type="obsolete">Tienes más preguntas.</translation>
         </message>
     </context>
     <context>
@@ -51,16 +60,28 @@
             <translation type="vanished">Hola</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Qué te gustaría saber?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Qué te gustaría saber?</translation>
+            <translation type="obsolete">¿Qué te gustaría saber?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Get Localized Text</name>
+        <message>
+            <source>Hello</source>
+            <comment>Text</comment>
+            <translation type="vanished">Hola</translation>
         </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Say</name>
         <message>
             <source>Hola</source>
+            <comment>Text</comment>
+            <translation type="vanished">Hola</translation>
+        </message>
+        <message>
+            <source>Hello</source>
             <comment>Text</comment>
             <translation type="vanished">Hola</translation>
         </message>

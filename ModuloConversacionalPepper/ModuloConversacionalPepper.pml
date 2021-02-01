@@ -15,7 +15,7 @@
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
     </Topics>
     <IgnoredPaths />
-    <Translations auto-fill="es_ES">
+    <Translations auto-fill="en_US">
         <Translation name="translation_en_US" src="translations/translation_en_US.ts" language="en_US" />
         <Translation name="translation_es_ES" src="translations/translation_es_ES.ts" language="es_ES" />
     </Translations>

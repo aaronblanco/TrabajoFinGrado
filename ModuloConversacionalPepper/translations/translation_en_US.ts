@@ -10,9 +10,9 @@
         </message>
         <message>
             <location filename="behavior_1/behavior.xar" line="0"/>
-            <source>Hola, soy Pepper y voy a mostrar el laboratorio Smarthome de la universidad de Almería.</source>
+            <source>Hello</source>
             <comment>Text</comment>
-            <translation type="unfinished"></translation>
+            <translation>Hello</translation>
         </message>
     </context>
     <context>
@@ -24,9 +24,9 @@
         </message>
         <message>
             <location filename="behavior_1/behavior.xar" line="0"/>
-            <source>Has elegido nada.</source>
+            <source>Hello</source>
             <comment>Text</comment>
-            <translation type="unfinished"></translation>
+            <translation>Hello</translation>
         </message>
     </context>
     <context>
@@ -36,12 +36,6 @@
             <comment>Text</comment>
             <translation type="vanished">Hello</translation>
         </message>
-        <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
-            <source>Tienes más preguntas.</source>
-            <comment>Text</comment>
-            <translation type="unfinished"></translation>
-        </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Animated Say (3)</name>
@@ -50,11 +44,21 @@
             <comment>Text</comment>
             <translation type="vanished">Hello</translation>
         </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Get Localized Text</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
-            <source>¿Qué te gustaría saber?</source>
+            <source>Hello</source>
             <comment>Text</comment>
-            <translation type="unfinished"></translation>
+            <translation type="vanished">Hello</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Say</name>
+        <message>
+            <source>Hello</source>
+            <comment>Text</comment>
+            <translation type="vanished">Hello</translation>
         </message>
     </context>
 </TS>
