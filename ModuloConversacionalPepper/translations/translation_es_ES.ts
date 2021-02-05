@@ -14,10 +14,9 @@
             <translation type="obsolete">Hola, soy Pepper y voy a mostrar el laboratorio Smarthome de la universidad de Almería.</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Hello</source>
             <comment>Text</comment>
-            <translation>Hola</translation>
+            <translation type="vanished">Hola</translation>
         </message>
     </context>
     <context>
@@ -33,10 +32,9 @@
             <translation type="obsolete">Has elegido nada.</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Hello</source>
             <comment>Text</comment>
-            <translation>Hola</translation>
+            <translation type="vanished">Hola</translation>
         </message>
     </context>
     <context>
@@ -66,11 +64,29 @@
         </message>
     </context>
     <context>
+        <name>behavior_1/behavior.xar:/Cerrar aplicacion</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>De acuerdo, vuelvo a mi estado anterior.</source>
+            <comment>Text</comment>
+            <translation type="unfinished"></translation>
+        </message>
+    </context>
+    <context>
         <name>behavior_1/behavior.xar:/Get Localized Text</name>
         <message>
             <source>Hello</source>
             <comment>Text</comment>
             <translation type="vanished">Hola</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Presentacion</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio SmartHome, ¿Quieres que empiece?</source>
+            <comment>Text</comment>
+            <translation type="unfinished"></translation>
         </message>
     </context>
     <context>

@@ -21,10 +21,14 @@ Esta aplicación se ejecutará en un robot Pepper Y20.
   <behaviorContent path="behavior_1">
    <userRequestable/>
    <nature>interactive</nature>
+   <triggerSentences/>
+   <loadingResponses/>
+   <autonomous/>
    <permissions/>
   </behaviorContent>
-  <dialogContent topicName="ExampleDialog" typeVersion="1.0">
-   <topic language="en_US" path="behavior_1/ExampleDialog/ExampleDialog_enu.top"/>
+  <dialogContent typeVersion="1.0" topicName="ExampleDialog">
+   <topic path="behavior_1/ExampleDialog/ExampleDialog_enu.top" language="en_US"/>
+   <topic path="behavior_1/ExampleDialog/ExampleDialog_spe.top" language="es_ES"/>
   </dialogContent>
  </contents>
  <requirements>
