@@ -73,6 +73,15 @@
         </message>
     </context>
     <context>
+        <name>behavior_1/behavior.xar:/Explicacion_Entrada</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hello</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Hola</translation>
+        </message>
+    </context>
+    <context>
         <name>behavior_1/behavior.xar:/Get Localized Text</name>
         <message>
             <source>Hello</source>
@@ -97,9 +106,10 @@
             <translation type="vanished">Hola</translation>
         </message>
         <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Hello</source>
             <comment>Text</comment>
-            <translation type="vanished">Hola</translation>
+            <translation>Hola</translation>
         </message>
     </context>
 </TS>
