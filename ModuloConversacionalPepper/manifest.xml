@@ -10,23 +10,37 @@ Esta aplicación se ejecutará en un robot Pepper Y20.
 </description>
  </descriptions>
  <supportedLanguages>
-  <language>en_US</language>
   <language>es_ES</language>
  </supportedLanguages>
  <descriptionLanguages>
-  <language>en_US</language>
   <language>es_ES</language>
  </descriptionLanguages>
  <contents>
   <behaviorContent path="behavior_1">
    <userRequestable/>
    <nature>interactive</nature>
-   <permissions/>
+   <names>
+    <name lang="en_US">Mostrar_Smarthome</name>
+    <name lang="es_ES">MostrarSmarthome</name>
+   </names>
+   <triggerSentences>
+    <sentence lang="es_ES">Empezar presentacion</sentence>
+    <sentence lang="es_ES">Enseñanos el laboratorio</sentence>
+    <sentence lang="es_ES">Enseña el laboratorio</sentence>
+    <sentence lang="es_ES">Enseña la casa</sentence>
+    <sentence lang="es_ES">Muestrame la casa</sentence>
+   </triggerSentences>
+   <loadingResponses>
+    <sentence lang="es_ES">Un segundo, estoy pensando.</sentence>
+    <sentence lang="es_ES">Un momento.</sentence>
+    <sentence lang="es_ES">Espera un momento.</sentence>
+   </loadingResponses>
+   <autonomous/>
+   <permissions>
+    <canStandUp/>
+    <canSitDown/>
+   </permissions>
   </behaviorContent>
-  <dialogContent typeVersion="1.0" topicName="ExampleDialog">
-   <topic path="behavior_1/ExampleDialog/ExampleDialog_enu.top" language="en_US"/>
-   <topic path="behavior_1/ExampleDialog/ExampleDialog_spe.top" language="es_ES"/>
-  </dialogContent>
  </contents>
  <requirements>
   <naoqiRequirement/>

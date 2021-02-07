@@ -16,8 +16,7 @@
         <Topic name="ExampleDialog_spe" src="behavior_1/ExampleDialog/ExampleDialog_spe.top" topicName="ExampleDialog" language="es_ES" />
     </Topics>
     <IgnoredPaths />
-    <Translations auto-fill="en_US">
-        <Translation name="translation_en_US" src="translations/translation_en_US.ts" language="en_US" />
+    <Translations auto-fill="es_ES">
         <Translation name="translation_es_ES" src="translations/translation_es_ES.ts" language="es_ES" />
     </Translations>
 </Package>
