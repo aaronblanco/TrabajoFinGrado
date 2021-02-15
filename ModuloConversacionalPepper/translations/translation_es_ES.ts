@@ -75,10 +75,33 @@
     <context>
         <name>behavior_1/behavior.xar:/Explicacion_Entrada</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Hello</source>
             <comment>Text</comment>
-            <translation type="unfinished">Hola</translation>
+            <translation type="obsolete">Hola</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>A la entrada del laboratorio podemos ver tanto el sensor de huellas dáctilares como el video portero automático como mecanismos de control de acceso. </source>
+            <comment>Text</comment>
+            <translation type="unfinished">A la entrada del laboratorio podemos ver tanto el sensor de huellas dáctilares como el video portero automático como mecanismos de control de acceso. </translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Explicacion_sensores</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </source>
+            <comment>Text</comment>
+            <translation type="unfinished">Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Explicacion_sensores (1)</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </source>
+            <comment>Text</comment>
+            <translation type="unfinished">Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </translation>
         </message>
     </context>
     <context>
@@ -87,6 +110,15 @@
             <source>Hello</source>
             <comment>Text</comment>
             <translation type="vanished">Hola</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Preguntas</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Tienes alguna duda?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Tienes alguna duda?</translation>
         </message>
     </context>
     <context>
@@ -106,10 +138,9 @@
             <translation type="vanished">Hola</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Hello</source>
             <comment>Text</comment>
-            <translation>Hola</translation>
+            <translation type="vanished">Hola</translation>
         </message>
     </context>
 </TS>

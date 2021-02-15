@@ -35,7 +35,6 @@ Esta aplicación se ejecutará en un robot Pepper Y20.
     <sentence lang="es_ES">Un momento.</sentence>
     <sentence lang="es_ES">Espera un momento.</sentence>
    </loadingResponses>
-   <autonomous/>
    <permissions>
     <canStandUp/>
     <canSitDown/>
