@@ -87,6 +87,42 @@
         </message>
     </context>
     <context>
+        <name>behavior_1/behavior.xar:/Explicacion_aula</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Por último tenemos el aula, desde ahí podemos realizar el control domótico de la vivienda a través del controlador lógico.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Por último tenemos el aula, desde ahí podemos realizar el control domótico de la vivienda a través del controlador lógico.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Explicacion_cocina</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>En la cocina encontramos distintos electrodomésticos inteligentes como puede ser el frigorífico, la campana, el horno, la lavadora y el calentador. Además nos encontramos un sensor de CO2.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">En la cocina encontramos distintos electrodomésticos inteligentes como puede ser el frigorífico, la campana, el horno, la lavadora y el calentador. Además nos encontramos un sensor de CO2.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Explicacion_dormitorio</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Explicacion_salon</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>En el salón tenemos tanto una televisión inteligente como una cámara para reconocer al usuario.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">En el salón tenemos tanto una televisión inteligente como una cámara para reconocer al usuario.</translation>
+        </message>
+    </context>
+    <context>
         <name>behavior_1/behavior.xar:/Explicacion_sensores</name>
         <message>
             <location filename="behavior_1/behavior.xar" line="0"/>
@@ -98,10 +134,32 @@
     <context>
         <name>behavior_1/behavior.xar:/Explicacion_sensores (1)</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </source>
             <comment>Text</comment>
-            <translation type="unfinished">Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </translation>
+            <translation type="obsolete">Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </translation>
+        </message>
+        <message>
+            <source>En la cocina encontramos distintos electrodomésticos inteligentes como puede ser el frigorífico, la campana, el horno, la lavadora y el calentador. Además nos encontramos un sensor de CO2.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">En la cocina encontramos distintos electrodomésticos inteligentes como puede ser el frigorífico, la campana, el horno, la lavadora y el calentador. Además nos encontramos un sensor de CO2.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Explicacion_servicio</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Otra de las cosas que tenemos es un baño adaptado el cual está equipado con servicios esenciales como el inodoro, el plato de ducha o váscula. Adiccionalmente tenemos sensores de apertura y de presencia.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Otra de las cosas que tenemos es un baño adaptado el cual está equipado con servicios esenciales como el inodoro, el plato de ducha o váscula. Adiccionalmente tenemos sensores de apertura y de presencia.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Finalizar presentacion</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Y con esto se finaliza la presentación, espero que te haya gustado. </source>
+            <comment>Text</comment>
+            <translation type="unfinished">Y con esto se finaliza la presentación, espero que te haya gustado. </translation>
         </message>
     </context>
     <context>
