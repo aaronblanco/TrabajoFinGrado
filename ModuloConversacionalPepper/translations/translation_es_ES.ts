@@ -193,12 +193,70 @@
         </message>
     </context>
     <context>
-        <name>behavior_1/behavior.xar:/Standard Presentation/Explicacion_Entrada</name>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bathroom_Explanation  (1)/Bathroom Detaile Explanation /Animated Say</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Quieres repetir la explicación?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bathroom_Explanation  (1)/Bathroom Detaile Explanation /Preguntas</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Tienes alguna duda?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Tienes alguna duda?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bathroom_Explanation  (1)/Explicacion_Bathroom</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Otra de las cosas que tenemos es un baño adaptado el cual está equipado con servicios esenciales como el inodoro, el plato de ducha o váscula. Adiccionalmente tenemos sensores de apertura y de presencia.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Otra de las cosas que tenemos es un baño adaptado el cual está equipado con servicios esenciales como el inodoro, el plato de ducha o váscula. Adiccionalmente tenemos sensores de apertura y de presencia.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Entrance_Explanation/Entrance Detaile Explanation /Animated Say</name>
+        <message>
+            <source>Hola</source>
+            <comment>Text</comment>
+            <translation type="vanished">Hola</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Quieres repetir la explicación?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Entrance_Explanation/Entrance Detaile Explanation /Preguntas</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Tienes alguna duda?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Tienes alguna duda?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Entrance_Explanation/Explicacion_Entrada</name>
         <message>
             <location filename="behavior_1/behavior.xar" line="0"/>
             <source>A la entrada del laboratorio podemos ver tanto el sensor de huellas dáctilares como el video portero automático como mecanismos de control de acceso. </source>
             <comment>Text</comment>
             <translation type="unfinished">A la entrada del laboratorio podemos ver tanto el sensor de huellas dáctilares como el video portero automático como mecanismos de control de acceso. </translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Explicacion_Entrada</name>
+        <message>
+            <source>A la entrada del laboratorio podemos ver tanto el sensor de huellas dáctilares como el video portero automático como mecanismos de control de acceso. </source>
+            <comment>Text</comment>
+            <translation type="obsolete">A la entrada del laboratorio podemos ver tanto el sensor de huellas dáctilares como el video portero automático como mecanismos de control de acceso. </translation>
         </message>
     </context>
     <context>
@@ -213,10 +271,9 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Explicacion_cocina</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>En la cocina encontramos distintos electrodomésticos inteligentes como puede ser el frigorífico, la campana, el horno, la lavadora y el calentador. Además nos encontramos un sensor de CO2.</source>
             <comment>Text</comment>
-            <translation type="unfinished">En la cocina encontramos distintos electrodomésticos inteligentes como puede ser el frigorífico, la campana, el horno, la lavadora y el calentador. Además nos encontramos un sensor de CO2.</translation>
+            <translation type="obsolete">En la cocina encontramos distintos electrodomésticos inteligentes como puede ser el frigorífico, la campana, el horno, la lavadora y el calentador. Además nos encontramos un sensor de CO2.</translation>
         </message>
     </context>
     <context>
@@ -231,28 +288,25 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Explicacion_salon</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>En el salón tenemos tanto una televisión inteligente como una cámara para reconocer al usuario.</source>
             <comment>Text</comment>
-            <translation type="unfinished">En el salón tenemos tanto una televisión inteligente como una cámara para reconocer al usuario.</translation>
+            <translation type="obsolete">En el salón tenemos tanto una televisión inteligente como una cámara para reconocer al usuario.</translation>
         </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Explicacion_sensores</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </source>
             <comment>Text</comment>
-            <translation type="unfinished">Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </translation>
+            <translation type="obsolete">Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </translation>
         </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Explicacion_servicio</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Otra de las cosas que tenemos es un baño adaptado el cual está equipado con servicios esenciales como el inodoro, el plato de ducha o váscula. Adiccionalmente tenemos sensores de apertura y de presencia.</source>
             <comment>Text</comment>
-            <translation type="unfinished">Otra de las cosas que tenemos es un baño adaptado el cual está equipado con servicios esenciales como el inodoro, el plato de ducha o váscula. Adiccionalmente tenemos sensores de apertura y de presencia.</translation>
+            <translation type="obsolete">Otra de las cosas que tenemos es un baño adaptado el cual está equipado con servicios esenciales como el inodoro, el plato de ducha o váscula. Adiccionalmente tenemos sensores de apertura y de presencia.</translation>
         </message>
     </context>
     <context>
@@ -265,25 +319,84 @@
         </message>
     </context>
     <context>
-        <name>behavior_1/behavior.xar:/Standard Presentation/Preguntas</name>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Kitchen_Explanation /Explicacion_kitchen</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>En la cocina encontramos distintos electrodomésticos inteligentes como puede ser el frigorífico, la campana, el horno, la lavadora y el calentador. Además nos encontramos un sensor de CO2.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">En la cocina encontramos distintos electrodomésticos inteligentes como puede ser el frigorífico, la campana, el horno, la lavadora y el calentador. Además nos encontramos un sensor de CO2.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Kitchen_Explanation /Kitchen Detaile Explanation /Animated Say</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Quieres repetir la explicación?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Kitchen_Explanation /Kitchen Detaile Explanation /Preguntas</name>
         <message>
             <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
             <comment>Text</comment>
             <translation type="unfinished">¿Tienes alguna duda?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Preguntas</name>
+        <message>
+            <source>¿Tienes alguna duda?</source>
+            <comment>Text</comment>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
         </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Preguntas (1)</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Tienes alguna duda?</translation>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
         </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Preguntas (2)</name>
+        <message>
+            <source>¿Tienes alguna duda?</source>
+            <comment>Text</comment>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Preguntas (3)</name>
+        <message>
+            <source>¿Tienes alguna duda?</source>
+            <comment>Text</comment>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Sensors_Explanation /Explicacion_sensores</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </source>
+            <comment>Text</comment>
+            <translation type="unfinished">Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera. </translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Sensors_Explanation /Sensors Detaile Explanation /Animated Say</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Quieres repetir la explicación?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Sensors_Explanation /Sensors Detaile Explanation /Preguntas</name>
         <message>
             <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
@@ -292,7 +405,25 @@
         </message>
     </context>
     <context>
-        <name>behavior_1/behavior.xar:/Standard Presentation/Preguntas (3)</name>
+        <name>behavior_1/behavior.xar:/Standard Presentation/livingroom_Explanation /Explicacion_salon</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>En el salón tenemos tanto una televisión inteligente como una cámara para reconocer al usuario.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">En el salón tenemos tanto una televisión inteligente como una cámara para reconocer al usuario.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/livingroom_Explanation /livingroom Detaile Explanation /Animated Say</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Quieres repetir la explicación?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/livingroom_Explanation /livingroom Detaile Explanation /Preguntas</name>
         <message>
             <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
