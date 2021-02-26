@@ -220,6 +220,60 @@
         </message>
     </context>
     <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/Explicacion_dormitorio</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/livingroom Detaile Explanation /Animated Say</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Quieres repetir la explicación?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/livingroom Detaile Explanation /Preguntas</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Tienes alguna duda?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Tienes alguna duda?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Classroom_Explanation  (2)/Explicacion_aula</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Por último tenemos el aula, desde ahí podemos realizar el control domótico de la vivienda a través del controlador lógico.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Por último tenemos el aula, desde ahí podemos realizar el control domótico de la vivienda a través del controlador lógico.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Classroom_Explanation  (2)/livingroom Detaile Explanation /Animated Say</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Quieres repetir la explicación?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Classroom_Explanation  (2)/livingroom Detaile Explanation /Preguntas</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>¿Tienes alguna duda?</source>
+            <comment>Text</comment>
+            <translation type="unfinished">¿Tienes alguna duda?</translation>
+        </message>
+    </context>
+    <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Entrance_Explanation/Entrance Detaile Explanation /Animated Say</name>
         <message>
             <source>Hola</source>
@@ -262,10 +316,9 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Explicacion_aula</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Por último tenemos el aula, desde ahí podemos realizar el control domótico de la vivienda a través del controlador lógico.</source>
             <comment>Text</comment>
-            <translation type="unfinished">Por último tenemos el aula, desde ahí podemos realizar el control domótico de la vivienda a través del controlador lógico.</translation>
+            <translation type="obsolete">Por último tenemos el aula, desde ahí podemos realizar el control domótico de la vivienda a través del controlador lógico.</translation>
         </message>
     </context>
     <context>
@@ -279,10 +332,9 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Explicacion_dormitorio</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</source>
             <comment>Text</comment>
-            <translation type="unfinished">En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</translation>
+            <translation type="obsolete">En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</translation>
         </message>
     </context>
     <context>
