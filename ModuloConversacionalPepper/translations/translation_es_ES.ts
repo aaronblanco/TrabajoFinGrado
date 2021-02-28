@@ -204,10 +204,15 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Bathroom_Explanation  (1)/Bathroom Detaile Explanation /Preguntas</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Tienes alguna duda?</translation>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>En el baño, podemos destacar elementos como el inodoro, el cual gracias a sus sensores de apertura, se puede conocer si se ha dejado la tapa abierta o cerrada. Por otra parte, incluimos una váscula de peso, un elemento interesante para ayudarnos a controlar nuestra salud o los sensores en el espejo de detección de presencia, con los cuales harán que se enciendan automáticamente las luces.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">En el baño, podemos destacar elementos como el inodoro, el cual gracias a sus sensores de apertura, se puede conocer si se ha dejado la tapa abierta o cerrada. Por otra parte, incluimos una váscula de peso, un elemento interesante para ayudarnos a controlar nuestra salud o los sensores en el espejo de detección de presencia, con los cuales harán que se enciendan automáticamente las luces.</translation>
         </message>
     </context>
     <context>
@@ -240,10 +245,23 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/livingroom Detaile Explanation /Preguntas</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Tienes alguna duda?</translation>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
+
+Alexa, sube cabeza.
+Como podemos ver, la cama está conectada por internet, esto nos permite incluso acceder a ella fuera de aquí.
+Alexa, baja cabeza.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
+
+Alexa, sube cabeza.
+Como podemos ver, la cama está conectada por internet, esto nos permite incluso acceder a ella fuera de aquí.
+Alexa, baja cabeza.</translation>
         </message>
     </context>
     <context>
@@ -267,10 +285,15 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Classroom_Explanation  (2)/livingroom Detaile Explanation /Preguntas</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Tienes alguna duda?</translation>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>El aula es un espacio de trabajo para los distintos alumnos tanto de grado como de máster los cuales pueden trabajar aquí implementando en nuevas y futuras carácteristicas de el laboratorio. Esta aula incluye el bastidor desde donde podemos controlar los dispositivos de la casa, incluyendo un conmutador, reguladores, enchufes, etc.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">El aula es un espacio de trabajo para los distintos alumnos tanto de grado como de máster los cuales pueden trabajar aquí implementando en nuevas y futuras carácteristicas de el laboratorio. Esta aula incluye el bastidor desde donde podemos controlar los dispositivos de la casa, incluyendo un conmutador, reguladores, enchufes, etc.</translation>
         </message>
     </context>
     <context>
@@ -391,10 +414,15 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Kitchen_Explanation /Kitchen Detaile Explanation /Preguntas</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Tienes alguna duda?</translation>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>La cocina se podría decir que es un ecosistema tecnológico en sí, ya qué concentra una gran cantidad de dispositivos inteligentes. Tenemos por ejemplo un frigorífico inteligente el cual cuenta con sensor de apertura o sensores de control de su inventario. Existen otros elementos como el lavavajillas, o el horno y la lavadora los cuales están conectados vía web y se pueden controlar desde fuera de casa. Otro dispositivo interesate es el calentador, el cual se puede programar para activarse en las horas concretas qué exista un mayor ahorro energético. </source>
+            <comment>Text</comment>
+            <translation type="unfinished">La cocina se podría decir que es un ecosistema tecnológico en sí, ya qué concentra una gran cantidad de dispositivos inteligentes. Tenemos por ejemplo un frigorífico inteligente el cual cuenta con sensor de apertura o sensores de control de su inventario. Existen otros elementos como el lavavajillas, o el horno y la lavadora los cuales están conectados vía web y se pueden controlar desde fuera de casa. Otro dispositivo interesate es el calentador, el cual se puede programar para activarse en las horas concretas qué exista un mayor ahorro energético. </translation>
         </message>
     </context>
     <context>
@@ -450,10 +478,17 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Sensors_Explanation /Sensors Detaile Explanation /Preguntas</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Tienes alguna duda?</translation>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Existen diversos sensores los cuales tienen una importancia fundamental en cualquier casa inteligente. Estos sensores son dispositivos de entrada qué se encargaran de proveer la información a la casa para tomar decisiones como cerrar una ventana o abrirla en función de la temperatura. Siguiendo con el ejemplo anterior, conocer la temperatura nos permitirá saber si se debería de encender la calefacción o en caso de que detectemos una alta temperatura, el aire acondicionado. 
+      También los sensores de posición pueden encargarse de apagar las luces en caso de que se nos haya olvidado.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Existen diversos sensores los cuales tienen una importancia fundamental en cualquier casa inteligente. Estos sensores son dispositivos de entrada qué se encargaran de proveer la información a la casa para tomar decisiones como cerrar una ventana o abrirla en función de la temperatura. Siguiendo con el ejemplo anterior, conocer la temperatura nos permitirá saber si se debería de encender la calefacción o en caso de que detectemos una alta temperatura, el aire acondicionado. 
+      También los sensores de posición pueden encargarse de apagar las luces en caso de que se nos haya olvidado.</translation>
         </message>
     </context>
     <context>
@@ -477,10 +512,15 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/livingroom_Explanation /livingroom Detaile Explanation /Preguntas</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Tienes alguna duda?</translation>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>La televisión funciona en coordinación con la cámara, esta última reconoce al usuario, esto hará qué la televisión establezca una aplicación u otra en función del perfil qué se tenga. ¿Por qué no la probais? </source>
+            <comment>Text</comment>
+            <translation type="unfinished">La televisión funciona en coordinación con la cámara, esta última reconoce al usuario, esto hará qué la televisión establezca una aplicación u otra en función del perfil qué se tenga. ¿Por qué no la probais? </translation>
         </message>
     </context>
     <context>

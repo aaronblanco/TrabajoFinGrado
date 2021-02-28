@@ -11,6 +11,19 @@
         <File name="choice_sentences" src="behavior_1/Aldebaran/choice_sentences.xml" />
         <File name="choice_sentences_light" src="behavior_1/Aldebaran/choice_sentences_light.xml" />
         <File name="index" src="html/entrance.html" />
+        <File name="sensor" src="html/imagenes/sensor.jpg" />
+        <File name="sensors" src="html/sensors.html" />
+        <File name="frigorifico" src="html/imagenes/frigorifico.jpg" />
+        <File name="frigorifico2" src="html/imagenes/frigorifico2.png" />
+        <File name="kitchen" src="html/kitchen.html" />
+        <File name="bathroom" src="html/bathroom.html" />
+        <File name="sensorNivelcapacitivo" src="html/imagenes/sensorNivelcapacitivo.jpg" />
+        <File name="camaraSalon" src="html/imagenes/camaraSalon.jpg" />
+        <File name="livingroom" src="html/livingroom.html" />
+        <File name="bedroom" src="html/bedroom.html" />
+        <File name="amazonEcho3" src="html/imagenes/amazonEcho3.jpg" />
+        <File name="classroom" src="html/classroom.html" />
+        <File name="conmutador" src="html/imagenes/conmutador.jpg" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
