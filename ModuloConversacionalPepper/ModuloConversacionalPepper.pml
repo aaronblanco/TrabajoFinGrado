@@ -24,6 +24,7 @@
         <File name="amazonEcho3" src="html/imagenes/amazonEcho3.jpg" />
         <File name="classroom" src="html/classroom.html" />
         <File name="conmutador" src="html/imagenes/conmutador.jpg" />
+        <File name="sensorHuellas" src="html/imagenes/sensorHuellas.JPG" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />

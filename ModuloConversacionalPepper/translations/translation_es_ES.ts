@@ -313,10 +313,17 @@ Alexa, baja cabeza.</translation>
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Entrance_Explanation/Entrance Detaile Explanation /Preguntas</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Tienes alguna duda?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Tienes alguna duda?</translation>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Como podemos ver, tenemos una pantalla táctil la cual pertenece al conjunto del videoportero automático qué nos permitirá echar un ojo antes a quién nos venga a visitar.
+El elemento llamativo que nos encontramos aquí es el control de acceso vía huella digital, la cual es mucho más seguras que otros tipos. Y es menos frecuente de encontrar, sin embargo es más segura qué una cerradura manual.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Como podemos ver, tenemos una pantalla táctil la cual pertenece al conjunto del videoportero automático qué nos permitirá echar un ojo antes a quién nos venga a visitar.
+El elemento llamativo que nos encontramos aquí es el control de acceso vía huella digital, la cual es mucho más seguras que otros tipos. Y es menos frecuente de encontrar, sin embargo es más segura qué una cerradura manual.</translation>
         </message>
     </context>
     <context>
