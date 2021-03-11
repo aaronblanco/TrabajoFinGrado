@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 80%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+
+<div style="background-color:#f1f1f1;padding:15px;">
+  <h1>Baño</h1>
+
+</div>
+
+<div style="overflow:auto">
+ 
+  <div class="main">
+ 
+    <p>En el baño, podemos destacar elementos como el inodoro, el cual gracias a sus sensores de apertura, se puede conocer si se ha dejado la tapa abierta o cerrada.</p>
+      <p> Por otra parte, incluimos una váscula de peso, un elemento interesante para ayudarnos a controlar nuestra salud o los sensores en el espejo de detección de presencia, con los cuales harán que se enciendan automáticamente las luces. </p>
+    <img src="./imagenes/sensorNivelcapacitivo.jpg" style="width:60%; height: 60%;">
+  </div>
+
+  <div class="right">
+    <h2>Especificaciones técnicas.</h2>
+    <h3>Voltaje de operación</h3><p>5-24VDC</p>
+    <h3>Consumo de corriente</h3><p>5mA</p>
+    <h3>Tiempo de respuesta</h3><p>500ms</p>
+    <h3>Temperatura de funcionamiento</h3><p>0 - 100ºC</p>
+  
+  </div>
+</div>
+
+
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> </div>
+
+</body>
+</html>

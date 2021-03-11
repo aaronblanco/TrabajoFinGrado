@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 80%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+
+<div style="background-color:#f1f1f1;padding:15px;">
+  <h1>Dormitorio</h1>
+
+</div>
+
+<div style="overflow:auto">
+ 
+  <div class="main">
+ 
+    <p>Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.</p>
+
+    <p>Como podemos ver, la cama está conectada por internet, esto nos permite incluso acceder a ella fuera de aquí.</p>
+
+    <img src="./imagenes/amazonEcho3.jpg" style="width:50%; height: 50%;">
+  </div>
+
+  <div class="right">
+    <h2>Especificaciones técnicas.</h2>
+    <h3>Fabricante</h3><p>Amazon</p>
+    <h3>Dimensiones</h3><p>	148 x 99 x 99 mm</p>
+    <h3>Conectividad wifi</h3><p>Wifi de doble banda (2,4 y 5 GHz) compatible con redes 802.11a/b/g/n/ac.</p>
+    <h3>Sonido</h3><p>Woofer de neodimio de 76,2 mm (3”) y tweeter de 20 mm (0,8”)</p>
+  
+  </div>
+</div>
+
+
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> </div>
+
+</body>
+</html>
