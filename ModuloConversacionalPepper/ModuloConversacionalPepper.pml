@@ -21,6 +21,9 @@
         <File name="classroom" src="html/classroom.html" />
         <File name="conmutador" src="html/imagenes/conmutador.jpg" />
         <File name="sensorHuellas" src="html/imagenes/sensorHuellas.JPG" />
+        <File name="choice_sentences" src="behavior_1/Aldebaran/choice_sentences.xml" />
+        <File name="choice_sentences_light" src="behavior_1/Aldebaran/choice_sentences_light.xml" />
+        <File name="2021-04-16T084649.584Z" src="2021-04-16T084649.584Z.explo" />
     </Resources>
     <Topics />
     <IgnoredPaths />

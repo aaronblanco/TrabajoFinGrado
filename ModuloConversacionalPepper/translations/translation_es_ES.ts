@@ -18,6 +18,17 @@
             <comment>Text</comment>
             <translation type="vanished">Hola</translation>
         </message>
+        <message>
+            <source>Hola.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hola.</translation>
+        </message>
+        <message>
+            <location filename="C:/Program Files (x86)/Softbank Robotics/Choregraphe Suite 2.5/translations/behavior_1/behavior.xar" line="0"/>
+            <source></source>
+            <comment>Text</comment>
+            <translation></translation>
+        </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Animated Say (1)</name>
@@ -35,6 +46,12 @@
             <source>Hello</source>
             <comment>Text</comment>
             <translation type="vanished">Hola</translation>
+        </message>
+        <message>
+            <location filename="C:/Program Files (x86)/Softbank Robotics/Choregraphe Suite 2.5/translations/behavior_1/behavior.xar" line="0"/>
+            <source></source>
+            <comment>Text</comment>
+            <translation></translation>
         </message>
     </context>
     <context>
@@ -173,10 +190,14 @@
     <context>
         <name>behavior_1/behavior.xar:/Presentation</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio SmartHome, ¿Quieres que empiece?</source>
             <comment>Text</comment>
-            <translation type="unfinished">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio SmartHome, ¿Quieres que empiece?</translation>
+            <translation type="obsolete">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio SmartHome, ¿Quieres que empiece?</translation>
+        </message>
+        <message>
+            <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio SmartHome.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio SmartHome.</translation>
         </message>
     </context>
     <context>
@@ -191,14 +212,51 @@
             <comment>Text</comment>
             <translation type="vanished">Hola</translation>
         </message>
+        <message>
+            <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</translation>
+        </message>
+        <message>
+            <source>Hola, soy pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hola, soy pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</translation>
+        </message>
+        <message>
+            <source>Hola, soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hola, soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</translation>
+        </message>
+        <message>
+            <source>Hola.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hola.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Say (1)</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Say (2)</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</translation>
+        </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Bathroom_Explanation  (1)/Bathroom Detaile Explanation /Animated Say</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Quieres repetir la explicación?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+            <translation type="obsolete">¿Quieres repetir la explicación?</translation>
         </message>
     </context>
     <context>
@@ -225,30 +283,7 @@
         </message>
     </context>
     <context>
-        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/Explicacion_dormitorio</name>
-        <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
-            <source>En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</source>
-            <comment>Text</comment>
-            <translation type="unfinished">En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</translation>
-        </message>
-    </context>
-    <context>
-        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/livingroom Detaile Explanation /Animated Say</name>
-        <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
-            <source>¿Quieres repetir la explicación?</source>
-            <comment>Text</comment>
-            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
-        </message>
-    </context>
-    <context>
-        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/livingroom Detaile Explanation /Preguntas</name>
-        <message>
-            <source>¿Tienes alguna duda?</source>
-            <comment>Text</comment>
-            <translation type="obsolete">¿Tienes alguna duda?</translation>
-        </message>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/Bedroom Detaile Explanation /Preguntas</name>
         <message>
             <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
@@ -265,6 +300,53 @@ Alexa, baja cabeza.</translation>
         </message>
     </context>
     <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/Explicacion_dormitorio</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">En el dormitorio tenemos elementos habituales como una cama, armario o mesita de noche. La cama además está articulada y puede funcionar mediante comandos de voz con Alexa. Puedes probarlo después de esta presentación.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/livingroom Detaile Explanation /Animated Say</name>
+        <message>
+            <source>¿Quieres repetir la explicación?</source>
+            <comment>Text</comment>
+            <translation type="obsolete">¿Quieres repetir la explicación?</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/livingroom Detaile Explanation /Preguntas</name>
+        <message>
+            <source>¿Tienes alguna duda?</source>
+            <comment>Text</comment>
+            <translation type="obsolete">¿Tienes alguna duda?</translation>
+        </message>
+        <message>
+            <source>Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
+
+Alexa, sube cabeza.
+Como podemos ver, la cama está conectada por internet, esto nos permite incluso acceder a ella fuera de aquí.
+Alexa, baja cabeza.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
+
+Alexa, sube cabeza.
+Como podemos ver, la cama está conectada por internet, esto nos permite incluso acceder a ella fuera de aquí.
+Alexa, baja cabeza.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Classroom_Explanation  (2)/Classroom Detaile Explanation /Preguntas</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>El aula es un espacio de trabajo para los distintos alumnos tanto de grado como de máster los cuales pueden trabajar aquí implementando en nuevas y futuras carácteristicas de el laboratorio. Esta aula incluye el bastidor desde donde podemos controlar los dispositivos de la casa, incluyendo un conmutador, reguladores, enchufes, etc.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">El aula es un espacio de trabajo para los distintos alumnos tanto de grado como de máster los cuales pueden trabajar aquí implementando en nuevas y futuras carácteristicas de el laboratorio. Esta aula incluye el bastidor desde donde podemos controlar los dispositivos de la casa, incluyendo un conmutador, reguladores, enchufes, etc.</translation>
+        </message>
+    </context>
+    <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Classroom_Explanation  (2)/Explicacion_aula</name>
         <message>
             <location filename="behavior_1/behavior.xar" line="0"/>
@@ -276,10 +358,9 @@ Alexa, baja cabeza.</translation>
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Classroom_Explanation  (2)/livingroom Detaile Explanation /Animated Say</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Quieres repetir la explicación?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+            <translation type="obsolete">¿Quieres repetir la explicación?</translation>
         </message>
     </context>
     <context>
@@ -290,10 +371,9 @@ Alexa, baja cabeza.</translation>
             <translation type="obsolete">¿Tienes alguna duda?</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>El aula es un espacio de trabajo para los distintos alumnos tanto de grado como de máster los cuales pueden trabajar aquí implementando en nuevas y futuras carácteristicas de el laboratorio. Esta aula incluye el bastidor desde donde podemos controlar los dispositivos de la casa, incluyendo un conmutador, reguladores, enchufes, etc.</source>
             <comment>Text</comment>
-            <translation type="unfinished">El aula es un espacio de trabajo para los distintos alumnos tanto de grado como de máster los cuales pueden trabajar aquí implementando en nuevas y futuras carácteristicas de el laboratorio. Esta aula incluye el bastidor desde donde podemos controlar los dispositivos de la casa, incluyendo un conmutador, reguladores, enchufes, etc.</translation>
+            <translation type="obsolete">El aula es un espacio de trabajo para los distintos alumnos tanto de grado como de máster los cuales pueden trabajar aquí implementando en nuevas y futuras carácteristicas de el laboratorio. Esta aula incluye el bastidor desde donde podemos controlar los dispositivos de la casa, incluyendo un conmutador, reguladores, enchufes, etc.</translation>
         </message>
     </context>
     <context>
@@ -304,10 +384,9 @@ Alexa, baja cabeza.</translation>
             <translation type="vanished">Hola</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Quieres repetir la explicación?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+            <translation type="obsolete">¿Quieres repetir la explicación?</translation>
         </message>
     </context>
     <context>
@@ -412,10 +491,9 @@ El elemento llamativo que nos encontramos aquí es el control de acceso vía hue
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Kitchen_Explanation /Kitchen Detaile Explanation /Animated Say</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Quieres repetir la explicación?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+            <translation type="obsolete">¿Quieres repetir la explicación?</translation>
         </message>
     </context>
     <context>
@@ -476,10 +554,9 @@ El elemento llamativo que nos encontramos aquí es el control de acceso vía hue
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Sensors_Explanation /Sensors Detaile Explanation /Animated Say</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Quieres repetir la explicación?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+            <translation type="obsolete">¿Quieres repetir la explicación?</translation>
         </message>
     </context>
     <context>
@@ -510,10 +587,9 @@ El elemento llamativo que nos encontramos aquí es el control de acceso vía hue
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/livingroom_Explanation /livingroom Detaile Explanation /Animated Say</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>¿Quieres repetir la explicación?</source>
             <comment>Text</comment>
-            <translation type="unfinished">¿Quieres repetir la explicación?</translation>
+            <translation type="obsolete">¿Quieres repetir la explicación?</translation>
         </message>
     </context>
     <context>
@@ -537,6 +613,24 @@ El elemento llamativo que nos encontramos aquí es el control de acceso vía hue
             <source>No soy capaz de averiguar tu edad así que usaremos la presentación estandar.</source>
             <comment>Text</comment>
             <translation type="unfinished">No soy capaz de averiguar tu edad así que usaremos la presentación estandar.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard presentation (1)</name>
+        <message>
+            <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio SmartHome.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio SmartHome.</translation>
+        </message>
+        <message>
+            <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio smart home.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio smart home.</translation>
+        </message>
+        <message>
+            <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</translation>
         </message>
     </context>
 </TS>

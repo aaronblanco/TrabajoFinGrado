@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package version="0.0.0" uuid="moduloconversacionalpepper-733f25">
+<package uuid="moduloconversacionalpepper-733f25" version="0.0.0">
  <names>
   <name lang="en_US">MostrarSmartHome</name>
   <name lang="es_ES">MostrarSmartHome</name>
@@ -29,6 +29,7 @@ Esta aplicación se ejecutará en un robot Pepper Y20.&#xd;
     <sentence lang="es_ES">Enseña el laboratorio</sentence>
     <sentence lang="es_ES">Enseña la casa</sentence>
     <sentence lang="es_ES">Muestrame la casa</sentence>
+    <sentence lang="es_ES">Empieza la presentación</sentence>
    </triggerSentences>
    <loadingResponses>
     <sentence lang="es_ES">Un segundo, estoy pensando.</sentence>
