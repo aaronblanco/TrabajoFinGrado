@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="moduloconversacionalpepper-733f25" version="0.0.0">
+<package version="0.0.0" uuid="moduloconversacionalpepper-733f25">
  <names>
   <name lang="en_US">MostrarSmartHome</name>
   <name lang="es_ES">MostrarSmartHome</name>
@@ -30,12 +30,17 @@ Esta aplicación se ejecutará en un robot Pepper Y20.&#xd;
     <sentence lang="es_ES">Enseña la casa</sentence>
     <sentence lang="es_ES">Muestrame la casa</sentence>
     <sentence lang="es_ES">Empieza la presentación</sentence>
+    <sentence lang="es_ES">Haz cosas</sentence>
    </triggerSentences>
    <loadingResponses>
     <sentence lang="es_ES">Un segundo, estoy pensando.</sentence>
     <sentence lang="es_ES">Un momento.</sentence>
     <sentence lang="es_ES">Espera un momento.</sentence>
    </loadingResponses>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[(('Launchpad/NumPeopleZone2' > 0) ~ 30)
+&& ('Launchpad/PreviousActivity' !="moduloconversacionalpepper-733f25/behavior_1")]]></condition>
+   </autonomous>
    <permissions>
     <canStandUp/>
     <canSitDown/>

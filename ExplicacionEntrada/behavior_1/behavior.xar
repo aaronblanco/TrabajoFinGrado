@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8" ?><ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3"><Box name="root" id="-1" localization="8" tooltip="Root box of Choregraphe&apos;s behavior. Highest level possible." x="0" y="0"><bitmap>media/images/box/root.png</bitmap><script language="4"><content><![CDATA[]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /><Timeline enable="0"><BehaviorLayer name="behavior_layer1"><BehaviorKeyframe name="keyframe1" index="1"><Diagram><Box name="Entrance_Explanation" id="3" localization="8" tooltip="Enter description here" x="868" y="321"><bitmap>media/images/box/box-diagram.png</bitmap><script language="4"><content><![CDATA[]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="Explained_Entrance_onStart" type="1" type_size="1" nature="2" inner="0" tooltip="This input has been automatically generated&#x0A;by converting several boxes into a single box." id="2" /><Output name="output_continue" type="0" type_size="1" nature="2" inner="0" tooltip="This output has been automatically generated&#x0A;by converting several boxes into a single box." id="3" /><Output name="output_close" type="0" type_size="1" nature="2" inner="0" tooltip="This output has been automatically generated&#x0A;by converting several boxes into a single box." id="4" /><Timeline enable="0"><BehaviorLayer name="behavior_layer1"><BehaviorKeyframe name="keyframe1" index="1"><Diagram><Box name="Entrance Detaile Explanation " id="1" localization="8" tooltip="Explicación con web detallada de la entrada.&#x0A;" x="686" y="484"><bitmap>media/images/box/box-diagram.png</bitmap><script language="4"><content><![CDATA[]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="Preguntas_onStart" type="1" type_size="1" nature="2" inner="0" tooltip="This input has been automatically generated&#x0A;by converting several boxes into a single box." id="2" /><Output name="output_continueDetaile" type="1" type_size="1" nature="2" inner="0" tooltip="This output has been automatically generated&#x0A;by converting several boxes into a single box." id="3" /><Timeline enable="0"><BehaviorLayer name="behavior_layer1"><BehaviorKeyframe name="keyframe1" index="1"><Diagram><Box name="Hide Web View" id="4" localization="8" tooltip="Hides the webview (html content) on the tablet, behind a generic cover&#x0A;&#x0A;V1.0.0&#x0A;" x="803" y="81"><bitmap>media/images/box/internet/internet.png</bitmap><script language="4"><content><![CDATA[
+
+class MyClass(GeneratedClass):
+
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        pass
+
+    def _getTabletService(self):
+        tabletService = None
+        try:
+            tabletService = self.session().service("ALTabletService")
+        except Exception as e:
+            self.logger.error(e)
+        return tabletService
+
+    def onInput_onStart(self):
+        # We create TabletService here in order to avoid
+        # problems with connections and disconnections of the tablet during the life of the application
+        tabletService = self._getTabletService()
+        if tabletService:
+            tabletService.hideWebview()
+        else:
+            self.logger.warning("ALTabletService not found.")
+        self.onStopped()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="3" /></Box><Box name="Choice (light)" id="6" localization="8" tooltip="Launch speech recognition, and wait for one of a defined number of expected answers (written in the table of the box). the robot will prompt the speaker if he cannot understand and give suggestions as to available answers and other ways of selecting your choice. e.g. The tactile sensor on his head.&#x0A;&#x0A;Note that you must open this box to enter the question text and the available answers.&#x0A;&#x0A;This is a lighter version of Choice box from standard library which has no animation embedded.&#x0A;&#x0A;V1.1.0&#x0A;" x="448" y="60"><bitmap>media/images/box/interaction/choice.png</bitmap><script language="4"><content><![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+
+    def onInput_onStart(self):
+        self.bIsRunning = True
+
+    def onInput_onStop(self):
+        if( self.bIsRunning ):
+            self.onUnload()
+            self.onStopped()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" /><Output name="answer" type="3" type_size="1" nature="1" inner="0" tooltip="Answer recognized." id="5" /><Output name="output_negativa" type="1" type_size="1" nature="2" inner="0" tooltip="" id="6" /><Timeline enable="0"><BehaviorLayer name="behavior_layer1"><BehaviorKeyframe name="keyframe1" index="1"><Diagram><Box name="Choice" id="1" localization="8" tooltip="Launch the speech recognition waiting for a defined number of predicted answers (written in the table on the box). Available help&#x0A;from the robot which gives some possible answers and attracts attention on the other modalities to answer (head tactile sensor).&#x0A;&#x0A;You can edit a choice by left double-clicking on the line. You can add a choice by right clicking on a line and selecting &apos;Insert a&#x0A;row&apos;. You can delete a choice by right clicking on a line and selecting &apos;Remove a row&apos;. You can also write several alternative&#x0A;answers for the same choice by writing them on the line separated by the character &apos;/&apos;.&#x0A;Ex: apple pie / pie / apple&#x0A;Then if any of these answers (&apos;apple pie&apos;, &apos;pie&apos; or &apos;apple&apos;) are said, the corresponding output will be activated. Indeed, each output&#x0A;which name begins with &apos;output_&apos; correspond to the choice in the list placed just in front of the output.&#x0A;&#x0A;Moreover, you have advanced options appearing when you click on the blue cross. Then you can make the robot calculate the threshold&#x0A;average of choices with the 1/2/3 button. Actually, it will calculate recognition threshold of each alternative answer and put them from&#x0A;highest to smallest threshold. The threshold displayed in front of each choice then is the highest&apos;s." plugin="ui_choice_plugin" x="312" y="51"><bitmap>media/images/box/interaction/choice.png</bitmap><script language="4"><content><![CDATA[]]></content></script><pluginContent><arabic><keyword>نعم</keyword><keyword>لا</keyword><keyword></keyword></arabic><brazilian><keyword>sim</keyword><keyword>não</keyword><keyword></keyword></brazilian><chinese><keyword>是</keyword><keyword>不是</keyword><keyword></keyword></chinese><czech><keyword>ano</keyword><keyword>ne</keyword><keyword></keyword></czech><danish><keyword>ja</keyword><keyword>nej</keyword><keyword></keyword></danish><dutch><keyword>ja</keyword><keyword>nee</keyword><keyword></keyword></dutch><english><keyword>yes</keyword><keyword>no</keyword><keyword></keyword></english><finnish><keyword>kyllä</keyword><keyword>ei</keyword><keyword></keyword></finnish><french><keyword>oui</keyword><keyword>non</keyword><keyword></keyword></french><german><keyword>ja</keyword><keyword>nein</keyword><keyword></keyword></german><greek /><italian><keyword>sì</keyword><keyword>no</keyword><keyword></keyword></italian><japanese><keyword>はい</keyword><keyword>いいえ</keyword><keyword></keyword></japanese><korean><keyword>예</keyword><keyword>아니</keyword><keyword></keyword></korean><mandarintaiwan><keyword>是</keyword><keyword>不是</keyword><keyword></keyword></mandarintaiwan><norwegian /><polish><keyword>tak</keyword><keyword>nie</keyword><keyword></keyword></polish><portuguese><keyword>sim</keyword><keyword>não</keyword><keyword></keyword></portuguese><russian><keyword>да</keyword><keyword>нет</keyword><keyword></keyword></russian><spanish><keyword>si</keyword><keyword>no</keyword><keyword></keyword></spanish><swedish><keyword>ja</keyword><keyword>ingen</keyword><keyword></keyword></swedish><turkish><keyword>evet</keyword><keyword>hayır</keyword><keyword></keyword></turkish><language>spanish</language></pluginContent><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="0" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is&#x0A;received on this input. The signal can be&#x0A;either a string so that the robot asks a&#x0A;question before the recognition of a&#x0A;choice, or a bang so that the speech&#x0A;recognition starts immediately without any&#x0A;question." id="2" /><Input name="choicesList" type="0" type_size="1" nature="1" inner="0" tooltip="To have extern choices list (for example,&#x0A;depending on extern variables).&#x0A;!! Warning !! : Must be set before each&#x0A;time the box is started (with onStart&#x0A;input). Otherwise, the choices displayed&#x0A;on the box will be selected." id="3" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip='Box behavior stops when a signal is&#x0A;received on this input, the &apos;other&apos; output is&#x0A;stimulated by &quot;onStop&quot;.' id="4" /><Output name="other" type="0" type_size="1" nature="1" inner="0" tooltip='When the user skipped the question, this output gives how it has been&#x0A;skipped. Gives also the number of the choice chosen in case of external&#x0A;choices.&#x0A;This output can be:&#x0A;- &quot;timeout&quot; if the user has not replied.&#x0A;- &quot;notUnderstood&quot; if the interaction with the speech recognition failed.&#x0A;- &quot;onStop&quot; if the onStop input has been activated.&#x0A;- &quot;wordRecognised&quot; if the exit command has been understood.&#x0A;- &quot;onTactileSensor&quot; if the user has tapped the tactile sensor of the robot.&#x0A;- an integer being the number of the external choice in the input list.' id="5" /><Output name="output_1" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="6" /><Output name="output_2" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="7" /><Parameter name="Minimum threshold to understand" inherits_from_parent="0" content_type="2" value="0.2" default_value="0.2" min="0" max="1" tooltip="Minimum threshold to get in order to be understood by the robot." id="8" /><Parameter name="Minimum threshold to be sure" inherits_from_parent="0" content_type="2" value="0.3" default_value="0.3" min="0" max="1" tooltip="Minimum threshold to get so that the robot would be sure about the user&apos;s&#x0A;answer. Below this threshold, the robot asks a confirmation about what has been&#x0A;understood." id="9" /><Parameter name="Speech recognition timeout when confirmation" inherits_from_parent="0" content_type="1" value="6" default_value="6" min="1" max="20" tooltip="When the robot asks if what he understood is correct, after this time, if there has been&#x0A;nothing heard, the speech recognition is stopped and the answer understood is&#x0A;considered as correct." id="10" /><Parameter name="Speech recognition timeout" inherits_from_parent="0" content_type="1" value="6" default_value="6" min="1" max="20" tooltip="After this time, if there has been nothing heard, the speech recognition is stopped&#x0A;and the question is repeated or is skipped." id="11" /><Parameter name="Maximum number of repetition when no reply" inherits_from_parent="0" content_type="1" value="3" default_value="3" min="1" max="20" tooltip='After this number of times when the user did not reply, the question is skipped, and&#x0A;the output other is stimulated with &quot;timeout&quot;.' id="12" /><Parameter name="Repeat validated choice" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="If this option is activated, the robot repeats the validated choice when it exits the box." id="13" /><Parameter name="Activate ears light" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Activate ears light animation (turn, flash, etc...)." id="14" /><Parameter name="Activate eyes light" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Activate eyes light animation (turn, flash, etc...)." id="15" /><Parameter name="Activate brain light" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Activate brain light animation (turn, flash, etc...)." id="16" /><Parameter name="Tactile sensor menu timeout" inherits_from_parent="0" content_type="1" value="10" default_value="10" min="1" max="20" tooltip="After this time, if there has been no action made on the tactile sensor or the torso&#x0A;button, the choice currently selected is repeated or the question is skipped." id="17" /><Parameter name="Maximum number of repetition when failure" inherits_from_parent="0" content_type="1" value="5" default_value="5" min="1" max="20" tooltip='After this number of times when the robot did not understand the user, the question&#x0A;is skipped, and the output other is stimulated with &quot;notUnderstood&quot;.' id="18" /><Parameter name="Activate help when failure" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="When this parameter is activated, when the robot did not understand the user, he&#x0A;says some help enumerating available choices and attracting attention on the&#x0A;other available modalities (head tactile sensor)." id="19" /><Parameter name="Activate help command" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip='Enable the help command. So you can say &quot;help&quot; during the speech recognition&#x0A;and the robot will tell you more information.&#x0A;You will still be able to ask help by clicking the torso button.' id="20" /><Parameter name="Activate repeat command" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip='Activate the repeat command. So you can say &quot;repeat&quot; during the speech&#x0A;recognition and the robot will repeat the question.' id="21" /><Parameter name="Activate exit command" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip='Enable the exit command. So you can say &quot;exit&quot; during the speech recognition&#x0A;and the box will be stopped and the &apos;other&apos; output will be stimulated with&#x0A;&quot;wordRecognised&quot;.&#x0A;You will still be able to exit the box with&#x0A;the tactile sensor.' id="22" /><Parameter name="Sentences file" inherits_from_parent="0" content_type="4" value="/Aldebaran/choice_sentences_light.xml" default_value="/Aldebaran/choice_sentences_light.xml" tooltip="File containing all necessary sentences in each supported language." id="23" /></Box><Box name="Localized Text" id="5" localization="8" tooltip="Send on the output the text associated with the robot&apos;s current voice language.&#x0A;You can display and edit the text associated with any language by&#x0A;selecting the language in the combobox.&#x0A;&#x0A;!!Warning!! The text sent on the output is NOT the displayed one but the one&#x0A;associated with the robot&apos;s current voice language." plugin="localizationbox_plugin" x="59" y="54"><bitmap>media/images/box/interaction/vocabulary.png</bitmap><script language="4"><content><![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		try: # disable autoBind
+			GeneratedClass.__init__(self, False)
+		except TypeError: # if NAOqi < 1.14
+			GeneratedClass.__init__( self )
+
+		self.tts = ALProxy("ALTextToSpeech")
+		self.sentences = {
+			"Arabic" : " هل تحب الشوكولاته؟ ",
+			"Czech" : " Máš rád čokoládu? ",
+			"Danish" : " Kan du lide chokolade? ",
+			"German" : " Mögen Sie Schokolade? ",
+			"Greek" : "  ",
+			"English" : " ¿Quieres repetir la explicación? ",
+			"Spanish" : " ¿Quieres que repita la explicación? ",
+			"Finnish" : " Pidätkö suklaasta? ",
+			"French" : " Aimes-tu le chocolat ? ",
+			"Italian" : " Ti piace il cioccolato? ",
+			"Japanese" : " チョコレートが好きですか ",
+			"Korean" : " 당신은 초콜렛을 좋아합니까? ",
+			"Dutch" : " Hou je van chocolade? ",
+			"Norwegian" : "  ",
+			"Polish" : " Lubisz czekoladę? ",
+			"Brazilian" : " Você gosta de chocolate? ",
+			"Portuguese" : " Gostas de chocolate? ",
+			"Russian" : " Вы любите шоколад? ",
+			"Swedish" : " Gillar du choklad? ",
+			"Turkish" : " Çikolata sever misin? ",
+			"Chinese" : " 你喜欢吃巧克力吗？ ",
+			"MandarinTaiwan" : " 你喜歡吃巧克力嗎？ "
+		}
+
+	def onInput_onStart(self):
+		sDefaultLang = self.tts.getLanguage()
+		self.onStopped(self.sentences[sDefaultLang])]]></content></script><pluginContent><arabic><![CDATA[هل تحب الشوكولاته؟]]></arabic><czech><![CDATA[Máš rád čokoládu?]]></czech><danish><![CDATA[Kan du lide chokolade?]]></danish><german><![CDATA[Mögen Sie Schokolade?]]></german><greek><![CDATA[]]></greek><english><![CDATA[¿Quieres repetir la explicación?]]></english><spanish><![CDATA[¿Quieres que repita la explicación?]]></spanish><finnish><![CDATA[Pidätkö suklaasta?]]></finnish><french><![CDATA[Aimes-tu le chocolat ?]]></french><italian><![CDATA[Ti piace il cioccolato?]]></italian><japanese><![CDATA[チョコレートが好きですか]]></japanese><korean><![CDATA[당신은 초콜렛을 좋아합니까?]]></korean><dutch><![CDATA[Hou je van chocolade?]]></dutch><norwegian><![CDATA[]]></norwegian><polish><![CDATA[Lubisz czekoladę?]]></polish><brazilian><![CDATA[Você gosta de chocolate?]]></brazilian><portuguese><![CDATA[Gostas de chocolate?]]></portuguese><russian><![CDATA[Вы любите шоколад?]]></russian><swedish><![CDATA[Gillar du choklad?]]></swedish><turkish><![CDATA[Çikolata sever misin?]]></turkish><chinese><![CDATA[你喜欢吃巧克力吗？]]></chinese><mandarintaiwan><![CDATA[你喜歡吃巧克力嗎？]]></mandarintaiwan><language>6</language></pluginContent><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" /><Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Data sent when asked." id="3" /></Box><Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="5" /><Link inputowner="0" indexofinput="5" outputowner="1" indexofoutput="6" /><Link inputowner="0" indexofinput="6" outputowner="1" indexofoutput="7" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline><Resource name="Speech" type="Lock" timeout="0" /><Resource name="Speech recognition" type="Lock" timeout="0" /></Box><Box name="Delay (2)" id="1" localization="8" tooltip="Wait a moment before triggering the output. &#x0A;Can be stopped anytime. &#x0A;Multiple inputs will trigger multiple outputs." x="617" y="192"><bitmap>media/images/box/wait.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.delayed = []
+
+    def onUnload(self):
+        self.cancelDelays()
+
+    def cancelDelays(self):
+        cancel_list = list(self.delayed)
+        for d in cancel_list:
+            d.cancel()
+
+    def cleanDelay(self, fut, fut_ref):
+        self.delayed.remove(fut)
+
+    def triggerOutput(self):
+        self.timerOutput()
+
+    def onInput_onStart(self):
+        import qi
+        import functools
+        delay_future = qi.async(self.triggerOutput, delay=int(self.getParameter("Timeout (s)") * 1000 * 1000))
+        # keep the async operation in an array for cancel
+        # and remove it when it is finished in the callback
+        self.delayed.append(delay_future)
+        bound_clean = functools.partial(self.cleanDelay, delay_future)
+        delay_future.addCallback(bound_clean)
+
+    def onInput_onStop(self):
+        if self.getParameter("Trigger timerOutput if cancelled") and self.delayed:
+            self.timerOutput()
+        self.onUnload()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Delay box with the configured timeout value." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" /><Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once delay set in parameters is elapsed, or if the box is stopped and the appropriate parameter is set." id="4" /><Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="5" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" /><Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently delaying at least one signal and cancelled, output will be stimulated." id="6" /></Box><Box name="Show Image" id="13" localization="8" tooltip="display an image on the screen&#x0A;&#x0A;V1.0.0&#x0A;" x="204" y="450"><bitmap>media/images/box/interaction/rec_movie.png</bitmap><script language="4"><content><![CDATA[
+
+class MyClass(GeneratedClass):
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        pass
+
+    def _getTabletService(self):
+        tabletService = None
+        try:
+            tabletService = self.session().service("ALTabletService")
+        except Exception as e:
+            self.logger.error(e)
+        return tabletService
+
+    def _getAbsoluteUrl(self, partial_url):
+        import os
+        subPath = os.path.join(self.packageUid(), os.path.normpath(partial_url).lstrip("\\/"))
+        # We create TabletService here in order to avoid
+        # problems with connections and disconnections of the tablet during the life of the application
+        return "http://%s/apps/%s" %(self._getTabletService().robotIp(), subPath.replace(os.path.sep, "/"))
+
+    def onInput_onStart(self):
+        # We create TabletService here in order to avoid
+        # problems with connections and disconnections of the tablet during the life of the application
+        tabletService = self._getTabletService()
+        if tabletService:
+            try:
+                url = self.getParameter("ImageUrl")
+                if url == '':
+                    self.logger.error("URL of the image is empty")
+                if not url.startswith('http'):
+                    url = self._getAbsoluteUrl(url)
+                tabletService.showImage(url)
+            except Exception as err:
+                self.logger.error("Error during ShowImage : %s " % err)
+                self.onStopped()
+        else:
+            self.logger.warning("No ALTabletService, can't display the image.")
+            self.onStopped()
+
+    def onInput_onHideImage(self):
+        # We create TabletService here in order to avoid
+        # problems with connections and disconnections of the tablet during the life of the application
+        tabletService = self._getTabletService()
+        if tabletService:
+            try:
+                tabletService.hideImage()
+            except Exception as err:
+                self.logger.error("Error during HideImage : %s " % err)
+                self.onStopped()
+        else:
+            self.logger.warning("No ALTabletService, can't hide the image.")
+            self.onStopped()
+
+    def onInput_onPreLoadImage(self):
+        # We create TabletService here in order to avoid
+        # problems with connections and disconnections of the tablet during the life of the application
+        tabletService = self._getTabletService()
+        if tabletService:
+            try:
+                partialUrl = self.getParameter("ImageUrl")
+                fullUrl = self._getAbsoluteUrl(partialUrl)
+                tabletService.preLoadImage(fullUrl)
+            except Exception as err:
+                self.logger.warning("Error during preLoadImage : %s " % err)
+                self.onStopped()
+        else:
+            self.logger.warning("No ALTabletService, can't preload the image.")
+            self.onStopped()
+
+    def onInput_onStop(self):
+        self.onUnload()
+        self.onStopped()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Input name="onHideImage" type="1" type_size="1" nature="1" inner="0" tooltip="Hide the image when a signal is received on this input." id="4" /><Input name="onPreLoadImage" type="1" type_size="1" nature="1" inner="0" tooltip="Preload the image when a signal is received on this input." id="5" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="6" /><Parameter name="ImageUrl" inherits_from_parent="0" content_type="3" value="entrance.png" default_value="" custom_choice="0" tooltip='path of the image inside the &quot;html&quot; folder (e.g. &quot;/images/myimage.png&quot;' id="7" /></Box><Box name="Animated Say (1)" id="2" localization="8" tooltip="Say some text with animations. The text can be localized." x="276" y="224"><bitmap>media/images/box/interaction/say.png</bitmap><script language="4"><content><![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.tts = ALProxy('ALAnimatedSpeech')
+        self.ttsStop = ALProxy('ALAnimatedSpeech', True) #Create another proxy as wait is blocking if audioout is remote
+
+    def onLoad(self):
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self):
+        self.bIsRunning = True
+        try:
+            movement = self.getParameter("Speaking movement mode")
+            textParam = self.getParameter("Text")
+            if movement == "disabled":
+                textParam = "^start({0}) {1} ^wait({0})".format(self.getParameter("Animation"), textParam)
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += textParam
+            sentence +=  "\RST\ "
+            id = self.tts.post.say(str(sentence), {"speakingMovementMode":movement})
+            self.ids.append(id)
+            self.tts.wait(id, 0)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" /><Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" /><Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" /><Parameter name="Text" inherits_from_parent="0" content_type="5" value="Como podemos ver, tenemos una pantalla táctil la cual pertenece al conjunto del videoportero automático qué nos permitirá echar un ojo antes a quién nos venga a visitar.&#x0A;El elemento llamativo que nos encontramos aquí es el control de acceso vía huella digital, la cual es mucho más seguras que otros tipos. Y es menos frecuente de encontrar, sin embargo es más segura qué una cerradura manual." default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" /><Parameter name="Speaking movement mode" inherits_from_parent="0" content_type="3" value="disabled" default_value="contextual" custom_choice="0" tooltip="Change the body language mode during the speech.&#x0A;disabled: The robot will only play the animations given by the user through the animation parameter.&#x0A;random: During time the robot has no animation to play, he will launch random neutral animations.&#x0A;contextual: During time the robot has no animation to play, he will try to launch a new one accordingly to the saying text. Every time the robot can&apos;t find a contextual animation he will launch a random neutral animation." id="8"><Choice value="disabled" /><Choice value="random" /><Choice value="contextual" /></Parameter><Parameter name="Animation" inherits_from_parent="0" content_type="3" value="" default_value="" custom_choice="0" tooltip="The animation to play" id="9" /></Box><Link inputowner="0" indexofinput="3" outputowner="4" indexofoutput="3" /><Link inputowner="1" indexofinput="2" outputowner="6" indexofoutput="5" /><Link inputowner="4" indexofinput="2" outputowner="6" indexofoutput="6" /><Link inputowner="4" indexofinput="2" outputowner="6" indexofoutput="4" /><Link inputowner="13" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="6" indexofinput="2" outputowner="2" indexofoutput="4" /><Link inputowner="2" indexofinput="2" outputowner="1" indexofoutput="4" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box><Box name="Explicacion_Entrada" id="7" localization="8" tooltip="Say some text. The text can be localized." x="126" y="39"><bitmap>media/images/box/interaction/say.png</bitmap><script language="4"><content><![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.tts = ALProxy('ALTextToSpeech')
+        self.ttsStop = ALProxy('ALTextToSpeech', True) #Create another proxy as wait is blocking if audioout is remote
+
+    def onLoad(self):
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += self.getParameter("Text")
+            sentence +=  "\RST\ "
+            id = self.tts.post.say(str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id, 0)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" /><Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" /><Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="85" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" /><Parameter name="Text" inherits_from_parent="0" content_type="5" value="A la entrada del laboratorio podemos ver tanto el sensor de huellas dactilares como el video portero automatico como mecanismos de control de acceso." default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" /></Box><Box name="Choice (light)" id="6" localization="8" tooltip="Launch speech recognition, and wait for one of a defined number of expected answers (written in the table of the box). the robot will prompt the speaker if he cannot understand and give suggestions as to available answers and other ways of selecting your choice. e.g. The tactile sensor on his head.&#x0A;&#x0A;Note that you must open this box to enter the question text and the available answers.&#x0A;&#x0A;This is a lighter version of Choice box from standard library which has no animation embedded.&#x0A;&#x0A;V1.1.0&#x0A;" x="315" y="152"><bitmap>media/images/box/interaction/choice.png</bitmap><script language="4"><content><![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+
+    def onInput_onStart(self):
+        self.bIsRunning = True
+
+    def onInput_onStop(self):
+        if( self.bIsRunning ):
+            self.onUnload()
+            self.onStopped()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" /><Output name="answer" type="3" type_size="1" nature="1" inner="0" tooltip="Answer recognized." id="5" /><Output name="output_negativa" type="1" type_size="1" nature="2" inner="0" tooltip="" id="6" /><Output name="output_apagar" type="1" type_size="1" nature="2" inner="0" tooltip="" id="7" /><Timeline enable="0"><BehaviorLayer name="behavior_layer1"><BehaviorKeyframe name="keyframe1" index="1"><Diagram><Box name="Choice" id="1" localization="8" tooltip="Launch the speech recognition waiting for a defined number of predicted answers (written in the table on the box). Available help&#x0A;from the robot which gives some possible answers and attracts attention on the other modalities to answer (head tactile sensor).&#x0A;&#x0A;You can edit a choice by left double-clicking on the line. You can add a choice by right clicking on a line and selecting &apos;Insert a&#x0A;row&apos;. You can delete a choice by right clicking on a line and selecting &apos;Remove a row&apos;. You can also write several alternative&#x0A;answers for the same choice by writing them on the line separated by the character &apos;/&apos;.&#x0A;Ex: apple pie / pie / apple&#x0A;Then if any of these answers (&apos;apple pie&apos;, &apos;pie&apos; or &apos;apple&apos;) are said, the corresponding output will be activated. Indeed, each output&#x0A;which name begins with &apos;output_&apos; correspond to the choice in the list placed just in front of the output.&#x0A;&#x0A;Moreover, you have advanced options appearing when you click on the blue cross. Then you can make the robot calculate the threshold&#x0A;average of choices with the 1/2/3 button. Actually, it will calculate recognition threshold of each alternative answer and put them from&#x0A;highest to smallest threshold. The threshold displayed in front of each choice then is the highest&apos;s." plugin="ui_choice_plugin" x="356" y="50"><bitmap>media/images/box/interaction/choice.png</bitmap><script language="4"><content><![CDATA[]]></content></script><pluginContent><arabic><keyword>نعم</keyword><keyword>لا</keyword><keyword></keyword><keyword></keyword></arabic><brazilian><keyword>sim</keyword><keyword>não</keyword><keyword></keyword><keyword></keyword></brazilian><chinese><keyword>是</keyword><keyword>不是</keyword><keyword></keyword><keyword></keyword></chinese><czech><keyword>ano</keyword><keyword>ne</keyword><keyword></keyword><keyword></keyword></czech><danish><keyword>ja</keyword><keyword>nej</keyword><keyword></keyword><keyword></keyword></danish><dutch><keyword>ja</keyword><keyword>nee</keyword><keyword></keyword><keyword></keyword></dutch><english><keyword>yes</keyword><keyword>no</keyword><keyword></keyword><keyword></keyword></english><finnish><keyword>kyllä</keyword><keyword>ei</keyword><keyword></keyword><keyword></keyword></finnish><french><keyword>oui</keyword><keyword>non</keyword><keyword></keyword><keyword></keyword></french><german><keyword>ja</keyword><keyword>nein</keyword><keyword></keyword><keyword></keyword></german><greek><keyword></keyword></greek><italian><keyword>sì</keyword><keyword>no</keyword><keyword></keyword><keyword></keyword></italian><japanese><keyword>はい</keyword><keyword>いいえ</keyword><keyword></keyword><keyword></keyword></japanese><korean><keyword>예</keyword><keyword>아니</keyword><keyword></keyword><keyword></keyword></korean><mandarintaiwan><keyword>是</keyword><keyword>不是</keyword><keyword></keyword><keyword></keyword></mandarintaiwan><norwegian><keyword></keyword></norwegian><polish><keyword>tak</keyword><keyword>nie</keyword><keyword></keyword><keyword></keyword></polish><portuguese><keyword>sim</keyword><keyword>não</keyword><keyword></keyword><keyword></keyword></portuguese><russian><keyword>да</keyword><keyword>нет</keyword><keyword></keyword><keyword></keyword></russian><spanish><keyword>si</keyword><keyword>no</keyword><keyword>apagar</keyword><keyword></keyword></spanish><swedish><keyword>ja</keyword><keyword>ingen</keyword><keyword></keyword><keyword></keyword></swedish><turkish><keyword>evet</keyword><keyword>hayır</keyword><keyword></keyword><keyword></keyword></turkish><language>spanish</language></pluginContent><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="0" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is&#x0A;received on this input. The signal can be&#x0A;either a string so that the robot asks a&#x0A;question before the recognition of a&#x0A;choice, or a bang so that the speech&#x0A;recognition starts immediately without any&#x0A;question." id="2" /><Input name="choicesList" type="0" type_size="1" nature="1" inner="0" tooltip="To have extern choices list (for example,&#x0A;depending on extern variables).&#x0A;!! Warning !! : Must be set before each&#x0A;time the box is started (with onStart&#x0A;input). Otherwise, the choices displayed&#x0A;on the box will be selected." id="3" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip='Box behavior stops when a signal is&#x0A;received on this input, the &apos;other&apos; output is&#x0A;stimulated by &quot;onStop&quot;.' id="4" /><Output name="other" type="0" type_size="1" nature="1" inner="0" tooltip='When the user skipped the question, this output gives how it has been&#x0A;skipped. Gives also the number of the choice chosen in case of external&#x0A;choices.&#x0A;This output can be:&#x0A;- &quot;timeout&quot; if the user has not replied.&#x0A;- &quot;notUnderstood&quot; if the interaction with the speech recognition failed.&#x0A;- &quot;onStop&quot; if the onStop input has been activated.&#x0A;- &quot;wordRecognised&quot; if the exit command has been understood.&#x0A;- &quot;onTactileSensor&quot; if the user has tapped the tactile sensor of the robot.&#x0A;- an integer being the number of the external choice in the input list.' id="5" /><Output name="output_1" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="6" /><Output name="output_2" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="7" /><Output name="output_3" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="8" /><Parameter name="Minimum threshold to understand" inherits_from_parent="0" content_type="2" value="0.2" default_value="0.2" min="0" max="1" tooltip="Minimum threshold to get in order to be understood by the robot." id="9" /><Parameter name="Minimum threshold to be sure" inherits_from_parent="0" content_type="2" value="0.3" default_value="0.3" min="0" max="1" tooltip="Minimum threshold to get so that the robot would be sure about the user&apos;s&#x0A;answer. Below this threshold, the robot asks a confirmation about what has been&#x0A;understood." id="10" /><Parameter name="Speech recognition timeout when confirmation" inherits_from_parent="0" content_type="1" value="6" default_value="6" min="1" max="20" tooltip="When the robot asks if what he understood is correct, after this time, if there has been&#x0A;nothing heard, the speech recognition is stopped and the answer understood is&#x0A;considered as correct." id="11" /><Parameter name="Speech recognition timeout" inherits_from_parent="0" content_type="1" value="6" default_value="6" min="1" max="20" tooltip="After this time, if there has been nothing heard, the speech recognition is stopped&#x0A;and the question is repeated or is skipped." id="12" /><Parameter name="Maximum number of repetition when no reply" inherits_from_parent="0" content_type="1" value="3" default_value="3" min="1" max="20" tooltip='After this number of times when the user did not reply, the question is skipped, and&#x0A;the output other is stimulated with &quot;timeout&quot;.' id="13" /><Parameter name="Repeat validated choice" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="If this option is activated, the robot repeats the validated choice when it exits the box." id="14" /><Parameter name="Activate ears light" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Activate ears light animation (turn, flash, etc...)." id="15" /><Parameter name="Activate eyes light" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Activate eyes light animation (turn, flash, etc...)." id="16" /><Parameter name="Activate brain light" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Activate brain light animation (turn, flash, etc...)." id="17" /><Parameter name="Tactile sensor menu timeout" inherits_from_parent="0" content_type="1" value="10" default_value="10" min="1" max="20" tooltip="After this time, if there has been no action made on the tactile sensor or the torso&#x0A;button, the choice currently selected is repeated or the question is skipped." id="18" /><Parameter name="Maximum number of repetition when failure" inherits_from_parent="0" content_type="1" value="5" default_value="5" min="1" max="20" tooltip='After this number of times when the robot did not understand the user, the question&#x0A;is skipped, and the output other is stimulated with &quot;notUnderstood&quot;.' id="19" /><Parameter name="Activate help when failure" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="When this parameter is activated, when the robot did not understand the user, he&#x0A;says some help enumerating available choices and attracting attention on the&#x0A;other available modalities (head tactile sensor)." id="20" /><Parameter name="Activate help command" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip='Enable the help command. So you can say &quot;help&quot; during the speech recognition&#x0A;and the robot will tell you more information.&#x0A;You will still be able to ask help by clicking the torso button.' id="21" /><Parameter name="Activate repeat command" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip='Activate the repeat command. So you can say &quot;repeat&quot; during the speech&#x0A;recognition and the robot will repeat the question.' id="22" /><Parameter name="Activate exit command" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip='Enable the exit command. So you can say &quot;exit&quot; during the speech recognition&#x0A;and the box will be stopped and the &apos;other&apos; output will be stimulated with&#x0A;&quot;wordRecognised&quot;.&#x0A;You will still be able to exit the box with&#x0A;the tactile sensor.' id="23" /><Parameter name="Sentences file" inherits_from_parent="0" content_type="4" value="/Aldebaran/choice_sentences_light.xml" default_value="/Aldebaran/choice_sentences_light.xml" tooltip="File containing all necessary sentences in each supported language." id="24" /></Box><Box name="Localized Text" id="5" localization="8" tooltip="Send on the output the text associated with the robot&apos;s current voice language.&#x0A;You can display and edit the text associated with any language by&#x0A;selecting the language in the combobox.&#x0A;&#x0A;!!Warning!! The text sent on the output is NOT the displayed one but the one&#x0A;associated with the robot&apos;s current voice language." plugin="localizationbox_plugin" x="70" y="48"><bitmap>media/images/box/interaction/vocabulary.png</bitmap><script language="4"><content><![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		try: # disable autoBind
+			GeneratedClass.__init__(self, False)
+		except TypeError: # if NAOqi < 1.14
+			GeneratedClass.__init__( self )
+
+		self.tts = ALProxy("ALTextToSpeech")
+		self.sentences = {
+			"Arabic" : " هل تحب الشوكولاته؟ ",
+			"Czech" : " Máš rád čokoládu? ",
+			"Danish" : " Kan du lide chokolade? ",
+			"German" : " Mögen Sie Schokolade? ",
+			"Greek" : "  ",
+			"English" : " ¿Quieres repetir la explicación? ",
+			"Spanish" : " ¿Quieres saber algo más de la entrada? ",
+			"Finnish" : " Pidätkö suklaasta? ",
+			"French" : " Aimes-tu le chocolat ? ",
+			"Italian" : " Ti piace il cioccolato? ",
+			"Japanese" : " チョコレートが好きですか ",
+			"Korean" : " 당신은 초콜렛을 좋아합니까? ",
+			"Dutch" : " Hou je van chocolade? ",
+			"Norwegian" : "  ",
+			"Polish" : " Lubisz czekoladę? ",
+			"Brazilian" : " Você gosta de chocolate? ",
+			"Portuguese" : " Gostas de chocolate? ",
+			"Russian" : " Вы любите шоколад? ",
+			"Swedish" : " Gillar du choklad? ",
+			"Turkish" : " Çikolata sever misin? ",
+			"Chinese" : " 你喜欢吃巧克力吗？ ",
+			"MandarinTaiwan" : " 你喜歡吃巧克力嗎？ "
+		}
+
+	def onInput_onStart(self):
+		sDefaultLang = self.tts.getLanguage()
+		self.onStopped(self.sentences[sDefaultLang])]]></content></script><pluginContent><arabic><![CDATA[هل تحب الشوكولاته؟]]></arabic><czech><![CDATA[Máš rád čokoládu?]]></czech><danish><![CDATA[Kan du lide chokolade?]]></danish><german><![CDATA[Mögen Sie Schokolade?]]></german><greek><![CDATA[]]></greek><english><![CDATA[¿Quieres repetir la explicación?]]></english><spanish><![CDATA[¿Quieres saber algo más de la entrada?]]></spanish><finnish><![CDATA[Pidätkö suklaasta?]]></finnish><french><![CDATA[Aimes-tu le chocolat ?]]></french><italian><![CDATA[Ti piace il cioccolato?]]></italian><japanese><![CDATA[チョコレートが好きですか]]></japanese><korean><![CDATA[당신은 초콜렛을 좋아합니까?]]></korean><dutch><![CDATA[Hou je van chocolade?]]></dutch><norwegian><![CDATA[]]></norwegian><polish><![CDATA[Lubisz czekoladę?]]></polish><brazilian><![CDATA[Você gosta de chocolate?]]></brazilian><portuguese><![CDATA[Gostas de chocolate?]]></portuguese><russian><![CDATA[Вы любите шоколад?]]></russian><swedish><![CDATA[Gillar du choklad?]]></swedish><turkish><![CDATA[Çikolata sever misin?]]></turkish><chinese><![CDATA[你喜欢吃巧克力吗？]]></chinese><mandarintaiwan><![CDATA[你喜歡吃巧克力嗎？]]></mandarintaiwan><language>6</language></pluginContent><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" /><Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Data sent when asked." id="3" /></Box><Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="5" /><Link inputowner="0" indexofinput="5" outputowner="1" indexofoutput="6" /><Link inputowner="0" indexofinput="6" outputowner="1" indexofoutput="7" /><Link inputowner="0" indexofinput="7" outputowner="1" indexofoutput="8" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline><Resource name="Speech" type="Lock" timeout="0" /><Resource name="Speech recognition" type="Lock" timeout="0" /></Box><Link inputowner="7" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="3" outputowner="1" indexofoutput="3" /><Link inputowner="1" indexofinput="2" outputowner="6" indexofoutput="5" /><Link inputowner="6" indexofinput="2" outputowner="7" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="6" indexofoutput="7" /><Link inputowner="0" indexofinput="3" outputowner="6" indexofoutput="6" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box><Box name="Set Language" id="2" localization="8" tooltip="Set the language of your robot for the current application. Your robot will speak and understand the selected language as long as your application has focus. Any following call to ALSpeechRecognition (Speech Reco. box for instance), ALTextToSpeech (Say box for instance) or ALDialog will use this language.&#x0A;" x="172" y="248"><bitmap>media/images/box/interaction/say.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        try:
+            self.tts = ALProxy("ALTextToSpeech")
+        except:
+            self.logger.warn("ALTextToSpeech is not available, language setting cannot be applied to speech")
+            self.tts = None
+
+        try:
+            self.asr = ALProxy("ALSpeechRecognition")
+        except:
+            self.logger.warn("ALSpeechRecognition is not available, language setting cannot be applied to recognition")
+            self.asr = None
+
+        try:
+            self.dialog = ALProxy("ALDialog")
+        except:
+            self.logger.warn("ALDialog is not available, language setting cannot be applied to dialog")
+            self.dialog = None
+
+    def onInput_onSet(self):
+        lang = self.getParameter("Language")
+        try:
+            if self.asr:
+                self.asr.setLanguage( self.getParameter("Language") )
+            if self.tts:
+                self.tts.setLanguage( self.getParameter("Language") )
+            if self.dialog:
+                self.dialog.setLanguage( self.getParameter("Language") )
+            if self.tts is None and self.asr is None and self.dialog is None:
+                raise RuntimeError("Cannot set language: neither ALTextToSpeech nor ALSpeechRecognition nor ALDialog is available.")
+            self.onReady()
+        except:
+            error = "Language " + lang + " cannot be set."
+            self.logger.warn(error)
+            self.onError(error)]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onSet" type="1" type_size="1" nature="1" inner="0" tooltip="The data is set when a signal is received on this input." id="2" /><Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when the data has been set." id="3" /><Output name="onError" type="3" type_size="1" nature="2" inner="0" tooltip="Error output:&#x0A;- triggered if the language asked cannot be set" id="4" /><Parameter name="Language" inherits_from_parent="0" content_type="3" value="Spanish" default_value="English" custom_choice="1" tooltip="Set the language the robot speaks and understands." id="5"><Choice value="Arabic" /><Choice value="Brazilian" /><Choice value="Chinese" /><Choice value="Czech" /><Choice value="Danish" /><Choice value="Dutch" /><Choice value="English" /><Choice value="Finnish" /><Choice value="French" /><Choice value="German" /><Choice value="Greek" /><Choice value="Italian" /><Choice value="Japanese" /><Choice value="Korean" /><Choice value="MandarinTaiwan" /><Choice value="Norwegian" /><Choice value="Polish" /><Choice value="Portuguese" /><Choice value="Russian" /><Choice value="Spanish" /><Choice value="Swedish" /><Choice value="Turkish" /></Parameter><Resource name="Speech" type="Lock" timeout="0" /></Box><Box name="Set Reco. Lang." id="1" localization="8" tooltip="Select the language you would like the robot to recognize. Any following call to&#x0A;ALSpeechRecognition (Speech Reco. box for instance) will use this language.&#x0A;&#x0A;V1.1.0" x="284" y="474"><bitmap>media/images/box/interaction/reco_voice.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        try :
+            self.asr = ALProxy("ALSpeechRecognition")
+        except Exception as e:
+            self.asr = None
+            self.logger.error(e)
+
+    def onInput_onSet(self):
+        if self.asr:
+            self.asr.setLanguage( self.getParameter("Language") )
+        self.onReady()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onSet" type="1" type_size="1" nature="1" inner="0" tooltip="The data is set when a signal is received on this input." id="2" /><Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when the data has been set." id="3" /><Parameter name="Language" inherits_from_parent="0" content_type="3" value="Spanish" default_value="English" custom_choice="1" tooltip="Set the language the robot understands." id="4"><Choice value="Arabic" /><Choice value="Brazilian" /><Choice value="Chinese" /><Choice value="Czech" /><Choice value="Danish" /><Choice value="Dutch" /><Choice value="English" /><Choice value="Finnish" /><Choice value="French" /><Choice value="German" /><Choice value="Greek" /><Choice value="Italian" /><Choice value="Japanese" /><Choice value="Korean" /><Choice value="MandarinTaiwan" /><Choice value="Norwegian" /><Choice value="Polish" /><Choice value="Portuguese" /><Choice value="Russian" /><Choice value="Spanish" /><Choice value="Swedish" /><Choice value="Turkish" /></Parameter><Resource name="Speech recognition" type="Lock" timeout="0" /></Box><Box name="Set Speech Lang." id="4" localization="8" tooltip="Select the language you would like the robot to speak. Any following call to&#x0A;ALTextToSpeech (Say box for instance) will use this language." x="545" y="396"><bitmap>media/images/box/interaction/say.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.tts = ALProxy("ALTextToSpeech")
+
+    def onInput_onSet(self):
+        self.tts.setLanguage( self.getParameter("Language") )
+        self.onReady()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onSet" type="1" type_size="1" nature="1" inner="0" tooltip="The data is set when a signal is received on this input." id="2" /><Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when the data has been set." id="3" /><Parameter name="Language" inherits_from_parent="0" content_type="3" value="Spanish" default_value="English" custom_choice="1" tooltip="Set the language the robot speaks." id="4"><Choice value="Arabic" /><Choice value="Brazilian" /><Choice value="Chinese" /><Choice value="Czech" /><Choice value="Danish" /><Choice value="Dutch" /><Choice value="English" /><Choice value="Finnish" /><Choice value="French" /><Choice value="German" /><Choice value="Greek" /><Choice value="Italian" /><Choice value="Japanese" /><Choice value="Korean" /><Choice value="MandarinTaiwan" /><Choice value="Norwegian" /><Choice value="Polish" /><Choice value="Portuguese" /><Choice value="Russian" /><Choice value="Spanish" /><Choice value="Swedish" /><Choice value="Turkish" /></Parameter><Resource name="Speech" type="Lock" timeout="0" /></Box><Box name="Obstacle Avoidance" id="5" localization="8" tooltip="Go forward and turn right when there is an obstacle." x="351" y="51"><bitmap>media/images/box/movement/walk_forward.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        pass
+
+    def onLoad(self):
+        #~ puts code for box initialization here
+        pass
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        #~ self.onStopped() #~ activate output of the box
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #~ it is recommended to call onUnload of this box in a onStop method, as the code written in onUnload is used to stop the box as well
+        self.onStopped()
+        pass]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Input name="robotHasFallen" type="0" type_size="1" nature="4" stm_value_name="robotHasFallen" inner="1" tooltip="robotHasFallen desc" id="4" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" /><Timeline enable="0"><BehaviorLayer name="behavior_layer1"><BehaviorKeyframe name="keyframe1" index="1"><Diagram><Box name="Set External Anti-Collision" id="4" localization="8" tooltip="Enable or disable the collision protection on some specific part of the robot&apos;s body with external environment.&#x0A;&#x0A;For example if the protection is enabled on his left arm he will move his arm all the&#x0A;same than when it is not but avoiding his other body parts." x="124" y="129"><bitmap>media/images/box/sensors/anti_collision.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.motion = ALProxy( "ALMotion" )
+
+    def onUnload(self):
+        pass
+
+    def onInput_onSet(self):
+        # is it enable or disable asked?
+        enable = (self.getParameter("Action") == "Enable")
+        # enable/disable collision protection
+        self.motion.setExternalCollisionProtectionEnabled( self.getParameter("Body part"), enable )
+        self.output() # activate output of the box]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onSet" type="1" type_size="1" nature="1" inner="0" tooltip="The anti-collision feature is enabled or disabled when this input is stimulated." id="2" /><Output name="output" type="1" type_size="1" nature="2" inner="0" tooltip="" id="3" /><Parameter name="Body part" inherits_from_parent="0" content_type="3" value="Move" default_value="All" custom_choice="0" tooltip="Body part which avoids the collision." id="4"><Choice value="All" /><Choice value="Move" /><Choice value="Arms" /><Choice value="LArm" /><Choice value="RArm" /></Parameter><Parameter name="Action" inherits_from_parent="0" content_type="3" value="Enable" default_value="Enable" custom_choice="0" tooltip="Enable or disable the collision protection." id="5"><Choice value="Disable" /><Choice value="Enable" /></Parameter></Box><Box name="IsStanding" id="5" localization="8" tooltip="Uses ALRobotPosture to determine if the robot is standing or not." x="513" y="91"><bitmap>media/images/box/sensors/inertial_unit.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.motionProxy = ALProxy("ALMotion")
+        self.postureProxy = ALProxy("ALRobotPosture")
+        pass
+
+    def onUnload(self):
+        #~ puts code for box cleanup here
+        pass
+
+    def onInput_onGet(self):
+        if (self.postureProxy.getPostureFamily() == "Standing") and (self.motionProxy.robotIsWakeUp()):
+            self.onSuccess()
+        else:
+            self.onFaillure()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onGet" type="1" type_size="1" nature="1" inner="0" tooltip="" id="2" /><Output name="onSuccess" type="1" type_size="1" nature="2" inner="0" tooltip="" id="3" /><Output name="onFaillure" type="1" type_size="1" nature="2" inner="0" tooltip="" id="4" /></Box><Box name="Move To" id="6" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="335" y="121"><bitmap>media/images/box/movement/walk_forward.png</bitmap><script language="4"><content><![CDATA[import almath
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.motion = ALProxy("ALMotion")
+        self.positionErrorThresholdPos = 0.01
+        self.positionErrorThresholdAng = 0.03
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        self.motion.moveToward(0.0, 0.0, 0.0)
+
+    def onInput_onStart(self):
+        # The command position estimation will be set to the sensor position
+        # when the robot starts moving, so we use sensors first and commands later.
+        initPosition = almath.Pose2D(self.motion.getRobotPosition(True))
+        targetDistance = almath.Pose2D(self.getParameter("Distance X (m)"), \
+            self.getParameter("Distance Y (m)"), \
+            self.getParameter("Theta (rad)"))
+        expectedEndPosition = initPosition * targetDistance
+        enableArms = self.getParameter("Arms movement enabled")
+        self.motion.setMoveArmsEnabled(enableArms, enableArms)
+        self.motion.moveTo(self.getParameter("Distance X (m)"), \
+            self.getParameter("Distance Y (m)"), \
+            self.getParameter("Theta (rad)"))
+
+        # The move is finished so output
+        realEndPosition = almath.Pose2D(self.motion.getRobotPosition(False))
+        positionError = realEndPosition.diff(expectedEndPosition)
+        positionError.theta = almath.modulo2PI(positionError.theta)
+        if (abs(positionError.x) < self.positionErrorThresholdPos \
+            and abs(positionError.y) < self.positionErrorThresholdPos \
+            and abs(positionError.theta) < self.positionErrorThresholdAng):
+            self.onArrivedAtDestination()
+        else:
+            self.onStoppedBeforeArriving(positionError.toVector())
+
+    def onInput_onStop(self):
+        self.onUnload()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onArrivedAtDestination" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when the robot arrives at its destination." id="4" /><Output name="onStoppedBeforeArriving" type="0" type_size="1" nature="1" inner="0" tooltip="Signal sent when the robot stops before arriving to its destination. Returns a vector [x (m), y (m), theta(rad)] with the remaining distance up to the destination. This distance is expressed in the ROBOT frame." id="5" /><Parameter name="Distance X (m)" inherits_from_parent="0" content_type="2" value="5" default_value="0.2" min="-5" max="10" tooltip="The distance in meters for forward/backward motion. Positive value&#x0A;means forward, negative value means backward." id="6" /><Parameter name="Distance Y (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-5" max="5" tooltip="The distance in meters for lateral motion. Positive value means left, negative&#x0A;value means right." id="7" /><Parameter name="Theta (rad)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-3.14" max="3.14" tooltip="The orientation in radians for final rotation. Positive value means anticlockwise,&#x0A;negative value means clockwise." id="8" /><Parameter name="Arms movement enabled" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Enables natural motion of the arms." id="9" /><Resource name="Legs" type="Lock" timeout="0" /></Box><Box name="Move To" id="1" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="709" y="234"><bitmap>media/images/box/movement/walk_forward.png</bitmap><script language="4"><content><![CDATA[import almath
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.motion = ALProxy("ALMotion")
+        self.positionErrorThresholdPos = 0.01
+        self.positionErrorThresholdAng = 0.03
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        self.motion.moveToward(0.0, 0.0, 0.0)
+
+    def onInput_onStart(self):
+        # The command position estimation will be set to the sensor position
+        # when the robot starts moving, so we use sensors first and commands later.
+        initPosition = almath.Pose2D(self.motion.getRobotPosition(True))
+        targetDistance = almath.Pose2D(self.getParameter("Distance X (m)"), \
+            self.getParameter("Distance Y (m)"), \
+            self.getParameter("Theta (rad)"))
+        expectedEndPosition = initPosition * targetDistance
+        enableArms = self.getParameter("Arms movement enabled")
+        self.motion.setMoveArmsEnabled(enableArms, enableArms)
+        self.motion.moveTo(self.getParameter("Distance X (m)"), \
+            self.getParameter("Distance Y (m)"), \
+            self.getParameter("Theta (rad)"))
+
+        # The move is finished so output
+        realEndPosition = almath.Pose2D(self.motion.getRobotPosition(False))
+        positionError = realEndPosition.diff(expectedEndPosition)
+        positionError.theta = almath.modulo2PI(positionError.theta)
+        if (abs(positionError.x) < self.positionErrorThresholdPos \
+            and abs(positionError.y) < self.positionErrorThresholdPos \
+            and abs(positionError.theta) < self.positionErrorThresholdAng):
+            self.onArrivedAtDestination()
+        else:
+            self.onStoppedBeforeArriving(positionError.toVector())
+
+    def onInput_onStop(self):
+        self.onUnload()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onArrivedAtDestination" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when the robot arrives at its destination." id="4" /><Output name="onStoppedBeforeArriving" type="0" type_size="1" nature="1" inner="0" tooltip="Signal sent when the robot stops before arriving to its destination. Returns a vector [x (m), y (m), theta(rad)] with the remaining distance up to the destination. This distance is expressed in the ROBOT frame." id="5" /><Parameter name="Distance X (m)" inherits_from_parent="0" content_type="2" value="-0.1" default_value="0.2" min="-5" max="10" tooltip="The distance in meters for forward/backward motion. Positive value&#x0A;means forward, negative value means backward." id="6" /><Parameter name="Distance Y (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-5" max="5" tooltip="The distance in meters for lateral motion. Positive value means left, negative&#x0A;value means right." id="7" /><Parameter name="Theta (rad)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-3.14" max="3.14" tooltip="The orientation in radians for final rotation. Positive value means anticlockwise,&#x0A;negative value means clockwise." id="8" /><Parameter name="Arms movement enabled" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Enables natural motion of the arms." id="9" /><Resource name="Legs" type="Lock" timeout="0" /></Box><Box name="Move To" id="2" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="387" y="443"><bitmap>media/images/box/movement/walk_forward.png</bitmap><script language="4"><content><![CDATA[import almath
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.motion = ALProxy("ALMotion")
+        self.positionErrorThresholdPos = 0.01
+        self.positionErrorThresholdAng = 0.03
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        self.motion.moveToward(0.0, 0.0, 0.0)
+
+    def onInput_onStart(self):
+        # The command position estimation will be set to the sensor position
+        # when the robot starts moving, so we use sensors first and commands later.
+        initPosition = almath.Pose2D(self.motion.getRobotPosition(True))
+        targetDistance = almath.Pose2D(self.getParameter("Distance X (m)"), \
+            self.getParameter("Distance Y (m)"), \
+            self.getParameter("Theta (rad)"))
+        expectedEndPosition = initPosition * targetDistance
+        enableArms = self.getParameter("Arms movement enabled")
+        self.motion.setMoveArmsEnabled(enableArms, enableArms)
+        self.motion.moveTo(self.getParameter("Distance X (m)"), \
+            self.getParameter("Distance Y (m)"), \
+            self.getParameter("Theta (rad)"))
+
+        # The move is finished so output
+        realEndPosition = almath.Pose2D(self.motion.getRobotPosition(False))
+        positionError = realEndPosition.diff(expectedEndPosition)
+        positionError.theta = almath.modulo2PI(positionError.theta)
+        if (abs(positionError.x) < self.positionErrorThresholdPos \
+            and abs(positionError.y) < self.positionErrorThresholdPos \
+            and abs(positionError.theta) < self.positionErrorThresholdAng):
+            self.onArrivedAtDestination()
+        else:
+            self.onStoppedBeforeArriving(positionError.toVector())
+
+    def onInput_onStop(self):
+        self.onUnload()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onArrivedAtDestination" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when the robot arrives at its destination." id="4" /><Output name="onStoppedBeforeArriving" type="0" type_size="1" nature="1" inner="0" tooltip="Signal sent when the robot stops before arriving to its destination. Returns a vector [x (m), y (m), theta(rad)] with the remaining distance up to the destination. This distance is expressed in the ROBOT frame." id="5" /><Parameter name="Distance X (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0.2" min="-5" max="10" tooltip="The distance in meters for forward/backward motion. Positive value&#x0A;means forward, negative value means backward." id="6" /><Parameter name="Distance Y (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-5" max="5" tooltip="The distance in meters for lateral motion. Positive value means left, negative&#x0A;value means right." id="7" /><Parameter name="Theta (rad)" inherits_from_parent="0" content_type="2" value="-0.4" default_value="0" min="-3.14" max="3.14" tooltip="The orientation in radians for final rotation. Positive value means anticlockwise,&#x0A;negative value means clockwise." id="8" /><Parameter name="Arms movement enabled" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Enables natural motion of the arms." id="9" /><Resource name="Legs" type="Lock" timeout="0" /></Box><Link inputowner="4" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="5" outputowner="5" indexofoutput="4" /><Link inputowner="6" indexofinput="2" outputowner="4" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="6" indexofoutput="4" /><Link inputowner="5" indexofinput="2" outputowner="6" indexofoutput="5" /><Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="3" /><Link inputowner="2" indexofinput="2" outputowner="1" indexofoutput="4" /><Link inputowner="2" indexofinput="2" outputowner="1" indexofoutput="5" /><Link inputowner="6" indexofinput="2" outputowner="2" indexofoutput="4" /><Link inputowner="6" indexofinput="2" outputowner="2" indexofoutput="5" /><Link inputowner="0" indexofinput="5" outputowner="0" indexofoutput="4" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline><Resource name="All motors" type="Stop on demand" timeout="1" /></Box><Box name="Move Toward" id="6" localization="8" tooltip="Make the robot move in the direction you set in parameters.&#x0A;&#x0A;!!Warning!! the robot will not stop moving by himself. You need to either set x, y and theta to 0 or stop the box to stop him.&#x0A;&#x0A;Note: You can set the period of move direction update in parameters." x="156" y="181"><bitmap>media/images/box/movement/walk_forward.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        import threading
+        self.motion = ALProxy("ALMotion")
+        self.x = 0
+        self.y = 0
+        self.theta = 0
+        self.ptask = qi.PeriodicTask()
+        self.lock = threading.RLock()
+
+    def onUnload(self):
+        with self.lock:
+            self.ptask.stop()
+            self.x = 0
+            self.y = 0
+            self.theta = 0
+            self.motion.moveToward(0, 0, 0)
+            self.motion.waitUntilMoveIsFinished()
+
+    def onInput_onStop(self):
+        with self.lock:
+            self.onUnload()
+            self.onStopped()
+
+    def onInput_onStart(self):
+        with self.lock:
+            period = self.getParameter("Period of direction update (s)")
+            us_period = int(period*1000000)
+
+            self.ptask.compensateCallbackTime(True)
+            self.ptask.setCallback(self.updateMovement)
+            self.ptask.setUsPeriod(us_period)
+            self.ptask.start(True)
+
+    def moveFailed(self):
+        self.onUnload()
+        self.onMoveFailed()
+
+    def updateMovement(self):
+        import math
+        with self.lock:
+            enableArms = self.getParameter("Arms movement enabled")
+            self.motion.setMoveArmsEnabled(enableArms, enableArms)
+            x = self.getParameter("X")
+            y = self.getParameter("Y")
+            theta = self.getParameter("Theta")
+            period = self.getParameter("Period of direction update (s)")
+            epsilon = 0.0001
+            dx = math.fabs(x - self.x)
+            dy = math.fabs(y - self.y)
+            dt = math.fabs(theta - self.theta)
+
+            # Update moveToward parameters
+            if(dx > epsilon or dy > epsilon or dt > epsilon):
+                self.x=x
+                self.y=y
+                self.theta=theta
+                self.motion.moveToward(self.x, self.y, self.theta)
+
+            # Check if the move has been canceled
+            if (not self.motion.moveIsActive()):
+                self.moveFailed()
+
+            us_period = int(period*1000000)
+            self.ptask.setUsPeriod(us_period)]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when the box behavior is stopped." id="4" /><Output name="onMoveFailed" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when the motion move task is canceled." id="5" /><Parameter name="X" inherits_from_parent="0" content_type="2" value="0.2" default_value="0.2" min="-1" max="1" tooltip="The distance in meters for forward/backward motion. Positive value&#x0A;means forward, negative value means backward." id="6" /><Parameter name="Y" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-1" max="1" tooltip="The distance in meters for lateral motion. Positive value means left, negative&#x0A;value means right." id="7" /><Parameter name="Theta" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-1" max="1" tooltip="The orientation in radians for final rotation. Positive value means anticlockwise,&#x0A;negative value means clockwise." id="8" /><Parameter name="Period of direction update (s)" inherits_from_parent="0" content_type="2" value="0.1" default_value="0.1" min="0" max="1" tooltip="" id="9" /><Parameter name="Arms movement enabled" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Enables natural motion of the arms." id="10" /><Resource name="Legs" type="Lock" timeout="0" /></Box><Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="4" outputowner="5" indexofoutput="5" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box></ChoregrapheProject>
