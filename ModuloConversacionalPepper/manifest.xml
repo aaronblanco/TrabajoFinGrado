@@ -5,8 +5,8 @@
   <name lang="es_ES">MostrarSmartHome</name>
  </names>
  <descriptions>
-  <description lang="es_ES">Esta aplicación sirve para mostrar la el laboratorio Smarthome de la Universidad de Almería (UAL).&#xd;
-Esta aplicación se ejecutará en un robot Pepper Y20.&#xd;
+  <description lang="es_ES">Esta aplicación sirve para mostrar la el laboratorio Smarthome de la Universidad de Almería (UAL).&#xd;&#xd;
+Esta aplicación se ejecutará en un robot Pepper Y20.&#xd;&#xd;
 </description>
  </descriptions>
  <supportedLanguages>

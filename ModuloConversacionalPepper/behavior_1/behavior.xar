@@ -2667,11 +2667,13 @@ class MyClass(GeneratedClass):
 		self.onStopped(self.sentences[sDefaultLang])]]></content></script><pluginContent><arabic><![CDATA[هل تحب الشوكولاته؟]]></arabic><czech><![CDATA[Máš rád čokoládu?]]></czech><danish><![CDATA[Kan du lide chokolade?]]></danish><german><![CDATA[Mögen Sie Schokolade?]]></german><greek><![CDATA[]]></greek><english><![CDATA[Do you like chocolate?]]></english><spanish><![CDATA[Hemos terminado la presentación, ¿Quieres repetirla?]]></spanish><finnish><![CDATA[Pidätkö suklaasta?]]></finnish><french><![CDATA[Aimes-tu le chocolat ?]]></french><italian><![CDATA[Ti piace il cioccolato?]]></italian><japanese><![CDATA[チョコレートが好きですか]]></japanese><korean><![CDATA[당신은 초콜렛을 좋아합니까?]]></korean><dutch><![CDATA[Hou je van chocolade?]]></dutch><norwegian><![CDATA[]]></norwegian><polish><![CDATA[Lubisz czekoladę?]]></polish><brazilian><![CDATA[Você gosta de chocolate?]]></brazilian><portuguese><![CDATA[Gostas de chocolate?]]></portuguese><russian><![CDATA[Вы любите шоколад?]]></russian><swedish><![CDATA[Gillar du choklad?]]></swedish><turkish><![CDATA[Çikolata sever misin?]]></turkish><chinese><![CDATA[你喜欢吃巧克力吗？]]></chinese><mandarintaiwan><![CDATA[你喜歡吃巧克力嗎？]]></mandarintaiwan><language>6</language></pluginContent><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" /><Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Data sent when asked." id="3" /></Box><Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="5" /><Link inputowner="0" indexofinput="5" outputowner="1" indexofoutput="6" /><Link inputowner="0" indexofinput="6" outputowner="1" indexofoutput="8" /><Link inputowner="0" indexofinput="6" outputowner="1" indexofoutput="7" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline><Resource name="Speech" type="Lock" timeout="0" /><Resource name="Speech recognition" type="Lock" timeout="0" /></Box><Box name="Python Script" id="17" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="314" y="286"><bitmap>media/images/box/box-python-script.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
     def __init__(self):
         GeneratedClass.__init__(self)
+        self.navigation_service = ALProxy("ALNavigation")
+        self.motion_service = ALProxy("ALMotion")
+        self.tts = ALProxy('ALTextToSpeech')
+        pass
 
     def onLoad(self):
         #put initialization code here
-        self.navigation_service = ALProxy("ALNavigation")
-        self.motion_service = ALProxy("ALMotion")
         path = "/home/nao/.local/share/Explorer/mapa.explo"
         self.navigation_service.loadExploration(path)
         pass
@@ -2683,12 +2685,31 @@ class MyClass(GeneratedClass):
         #self.onStopped() #activate the output of the box
         guess = [0., 0.] # assuming the robot is not far from the place where
         # he started the loaded exploration.
-        self.navigation_service.relocalizeInMap(guess)
+        code = self.navigation_service.relocalizeInMap(guess)
+        if code == 0:
+            print("LA RESPUESTA ES OK.")
+        elif code == 1:
+            print("LA RESPUESTA ES KO.")
+        elif code == 2:
+            print("LA RESPUESTA ES Canceled.")
+        elif code == 3:
+            print("LA RESPUESTA ES TargetReached HA ALCANZADO LA POSICION.")
+        elif code == 4:
+            print("LA RESPUESTA ES TargetNotReached --NO-- HA ALCANZADO LA POSICION.")
+            sentence = "Estoy perdido."
+            id = self.tts.post.say(str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id, 0)
+        elif code == 5:
+            print("LA RESPUESTA ES TargetOutOfMap Destino fuera del mapa.")
+        else code == 1:
+            print("Esto no deberia de pasar.")
+
         self.navigation_service.startLocalization()
 
         # Navigate to another place in the map
 
-        self.navigation_service.navigateToInMap([10., 10., 0.3])
+        id = self.navigation_service.navigateToInMap([10., 10., 0.3])
 
 
 
@@ -2696,14 +2717,17 @@ class MyClass(GeneratedClass):
         # Check where the robot arrived
         print "I reached: " + str(self.navigation_service.getRobotPositionInMap()[0])
         # Stop localization
+        time.sleep(10)
         self.navigation_service.navigateToInMap([0., 0., 0.])
-        self.navigation_service.stopLocalization()
+
         print "@@@@@@@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
         pass
 
     def onInput_onStop(self):
         self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
-        self.onStopped() #activate the output of the box]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /></Box><Box name="Wait (6)" id="18" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="990" y="92"><bitmap>media/images/box/wait.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+        self.navigation_service.stopLocalization()
+        self.onStopped() #activate the output of the box
+        pass]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /></Box><Box name="Wait (6)" id="18" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="990" y="92"><bitmap>media/images/box/wait.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
     def __init__(self):
         GeneratedClass.__init__(self, False)
 
