@@ -660,10 +660,9 @@ El elemento llamativo que nos encontramos aquí es el control de acceso vía hue
             <translation type="obsolete">No soy capaz de averiguar tu edad así que usaremos la presentación estandar.</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>.</source>
             <comment>Text</comment>
-            <translation type="unfinished">.</translation>
+            <translation type="obsolete">.</translation>
         </message>
     </context>
     <context>

@@ -31,6 +31,9 @@
         <File name="sensors" src="html/sensors.png" />
         <File name="movimiento" src="movimiento.pmt" />
         <File name="mapa" src="mapa.explo" />
+        <File name="kitchen" src="html/kitchen.png" />
+        <File name="bathroom" src="html/bathroom.png" />
+        <File name="livingroom" src="html/livingroom.png" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
