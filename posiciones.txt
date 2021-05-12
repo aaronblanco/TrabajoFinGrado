@@ -1,0 +1,12 @@
+ Position2D(x=-0.203351, y=0.14407) Posicion en medio del recibidor
+ Position2D(x=-0.0718294, y=2.72518) Posicion mitad pasillo
+ Position2D(x=0.536459, y=4.86241) Posicion Televisor
+ Position2D(x=3.62722, y=5.3885) Posicion dormitorio
+ Position2D(x=3.56146, y=-0.858783) Cocina
+Position2D(x=3.18333, y=2.2813) Baño
+
+
+Position2D(x=4.16975, y=-0.842343) COCINA2
+Position2D(x=-0.170471, y=-0.447777) PUERTA
+Position2D(x=3.84094, y=2.2813) BAÑO
+Position2D(x=4.69583, y=5.25698) dormitorio2
