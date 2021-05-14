@@ -14,6 +14,7 @@
         <File name="robotutils" src="html/js/robotutils.js" />
         <File name="icon" src="html/img/icon.png" />
         <File name="README" src="README.md" />
+        <File name="mapa" src="mapa.explo" />
     </Resources>
     <Topics />
     <IgnoredPaths />

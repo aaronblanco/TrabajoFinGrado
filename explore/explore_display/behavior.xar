@@ -61,6 +61,9 @@ class MyClass(GeneratedClass):
 
     def onInput_onStart(self):
         # Get the map from navigation.
+        path = "/home/nao/.local/share/Explorer/2021-05-13T103104.394Z.explo"
+        self.nav.loadExploration(path)
+
         map = self.nav.getMetricalMap()
 
         # mpp = map[0]
