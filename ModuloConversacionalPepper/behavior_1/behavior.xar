@@ -2029,7 +2029,7 @@ class MyClass(GeneratedClass):
 
     def onLoad(self):
         #put initialization code here
-        path = "/home/nao/.local/share/Explorer/2021-04-30T111606.963Z.explo"
+        path = "/home/nao/.local/share/Explorer/2021-05-14T083453.029Z.explo"
         self.navigation_service.loadExploration(path)
         pass
     def onUnload(self):
@@ -2521,63 +2521,56 @@ class MyClass(GeneratedClass):
     def onUnload(self):
         #put clean-up code here
         pass
+    def respuesta(self, code):
 
-    def onInput_onStart(self):
-        #self.onStopped() #activate the output of the box
-        #guess = [0., 0.]
-        #guess = [3.5, -0.858783]
-        guess = [-0.8541533350944519, 0.07912316173315048] # assuming the robot is not far from the place where
-        # he started the loaded exploration.
-        code = self.navigation_service.relocalizeInMap(guess)[0]
-        print(code)
         if code == 0:
-            print("LA RESPUESTA ES OK.")
+            self.logger.info("LA RESPUESTA ES OK.")
         elif code == 1:
-            print("LA RESPUESTA ES KO.")
+            self.logger.info("LA RESPUESTA ES KO.")
         elif code == 2:
-            print("LA RESPUESTA ES Canceled.")
+            self.logger.info("LA RESPUESTA ES Canceled.")
         elif code == 3:
-            print("LA RESPUESTA ES TargetReached HA ALCANZADO LA POSICION.")
+            self.logger.info("LA RESPUESTA ES TargetReached HA ALCANZADO LA POSICION.")
         elif code == 4:
-            print("LA RESPUESTA ES TargetNotReached --NO-- HA ALCANZADO LA POSICION.")
+            self.logger.info("LA RESPUESTA ES TargetNotReached --NO-- HA ALCANZADO LA POSICION.")
             sentence = "Estoy perdido."
             id = self.tts.post.say(str(sentence))
             self.ids.append(id)
             self.tts.wait(id, 0)
         elif code == 5:
-            print("LA RESPUESTA ES TargetOutOfMap Destino fuera del mapa.")
+            self.logger.info("LA RESPUESTA ES TargetOutOfMap Destino fuera del mapa.")
         else:
-            print("Esto no deberia de pasar.")
+            self.logger.info("Esto no deberia de pasar.")
 
+
+
+    def onInput_onStart(self):
+        #self.onStopped() #activate the output of the box
+        #guess = [0., 0.]
+        #guess = [3.5, -0.858783]
         self.navigation_service.startLocalization()
+        guess = [-0.8541533350944519, 0.07912316173315048] # assuming the robot is not far from the place where
+        # he started the loaded exploration.
+        time.sleep(0.5)
+        code = self.navigation_service.relocalizeInMap(guess)[0]
+
 
         # Navigate to another place in the map
-        time.sleep(10)
-        id = self.navigation_service.navigateToInMap([5.8866753578186035, -3.2829692363739014])
-
-        id = self.navigation_service.navigateToInMap([-0.8541533350944519, 0.07912316173315048, 0.3])
-        time.sleep(10)
-
-        #id = self.navigation_service.navigateToInMap([0.0, 0.0, 0.3])
-        id = self.navigation_service.navigateToInMap([-0.254968523979187, -3.8821539878845215])
-
-
+        id = self.navigation_service.navigateToInMap([-0.254968523979187, -3.8821539878845215, 0.0], _async=True)
+        while (id.isRunning()):
+            time.sleep(0.5)
+            self.respuesta(id)
+        id = self.navigation_service.navigateToInMap([-0.8541533350944519, 0.07912316173315048, 0.0], _async=True)
+        while (id.isRunning()):
+            time.sleep(0.5)
+            self.respuesta(id)
         # Check where the robot arrived
+        self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
         print "I reached: " + str(self.navigation_service.getRobotPositionInMap()[0])
         # Stop localization
-        time.sleep(10)
-        id = self.navigation_service.navigateToInMap([-0.8541533350944519, 0.07912316173315048, 0.3])
-        time.sleep(10)
-        id = self.navigation_service.navigateToInMap([2.358142852783203, -3.382833480834961])
-        time.sleep(10)
-        id = self.navigation_service.navigateToInMap([-0.8541533350944519, 0.07912316173315048, 0.3])
-        time.sleep(10)
-        #time.sleep(10)
-        #id = self.navigation_service.navigateToInMap([4.69583, 5.25698, 0.3])
 
-        #time.sleep(10)
         #id = self.navigation_service.navigateToInMap([-0.170471, -0.447777, 0.3])
-        print "@@@@@@@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        self.logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         self.navigation_service.stopLocalization()
         self.onStopped()  #activate the output of the box
         pass
