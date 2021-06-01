@@ -244,10 +244,15 @@
     <context>
         <name>behavior_1/behavior.xar:/Say (2)</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</source>
             <comment>Text</comment>
-            <translation type="unfinished">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</translation>
+            <translation type="obsolete">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio casa domótica.</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Hola, soy Pepper y soy un robot con muchas utilidades, entre ellas, puedo presentar el laboratorio.</translation>
         </message>
     </context>
     <context>
@@ -284,18 +289,38 @@
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/Bedroom Detaile Explanation /Preguntas</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
 
 Alexa, sube cabeza.
 Como podemos ver, la cama está conectada por internet, esto nos permite incluso acceder a ella fuera de aquí.
 Alexa, baja cabeza.</source>
             <comment>Text</comment>
-            <translation type="unfinished">Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
+            <translation type="obsolete">Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
 
 Alexa, sube cabeza.
 Como podemos ver, la cama está conectada por internet, esto nos permite incluso acceder a ella fuera de aquí.
 Alexa, baja cabeza.</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
+
+Alexa, sube cabeza.
+Como podemos ver, la cama está conectada por internet, esto nos permite incluso acceder a ella fuera de aquí.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Lo más destacable es la cama articulada, esto sin duda es un avance muy relevante en tema de independencia de personas mayores como a gente con movilidad física reducida ya qué en un futuro, esto posibilitará una gran ayuda con solo unos comandos de voz.
+
+Alexa, sube cabeza.
+Como podemos ver, la cama está conectada por internet, esto nos permite incluso acceder a ella fuera de aquí.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Standard Presentation/Bedroom_Explanation  (1)/Bedroom Detaile Explanation /Preguntas (1)</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Alexa, baja cabeza.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Alexa, baja cabeza.</translation>
         </message>
     </context>
     <context>
@@ -514,10 +539,15 @@ El elemento llamativo que nos encontramos aquí es el control de acceso vía hue
     <context>
         <name>behavior_1/behavior.xar:/Standard Presentation/Finalizar presentacion</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Y con esto se finaliza la presentación, espero que te haya gustado. </source>
             <comment>Text</comment>
-            <translation type="unfinished">Y con esto se finaliza la presentación, espero que te haya gustado. </translation>
+            <translation type="obsolete">Y con esto se finaliza la presentación, espero que te haya gustado. </translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Y con esto se finaliza la presentación, espero que te haya gustado.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Y con esto se finaliza la presentación, espero que te haya gustado.</translation>
         </message>
     </context>
     <context>
