@@ -2064,7 +2064,16 @@ class MyClass(GeneratedClass):
             guess = [2.358142852783203, -3.382833480834961]
             code = self.navigation_service.relocalizeInMap(guess)[0]
             self.logger.info(code)
-            #self.tts.say("Llegué al baño.")
+            self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
+            coordenadas = str(self.navigation_service.getRobotPositionInMap()[0])
+            coordenadasInicio = "[0.0, 0.0, 0.0]"
+            self.navigation_service.stopLocalization()
+            if (coordenadas == coordenadasInicio):
+                sentence = "Estoy perdido pero os hablaré del lavabo."
+                id = self.tts.post.say(str(sentence))
+            else:
+                sentence = "Llegué al lavabo."
+                id = self.tts.post.say(str(sentence))
             time.sleep(0.5)
             self.logger.info("Girando")
             time.sleep(0.5)
@@ -2075,8 +2084,6 @@ class MyClass(GeneratedClass):
             self.motion_service.moveTo(x, y, theta)
 
 
-        # Check where the robot arrived
-        self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
 
         self.navigation_service.stopLocalization()
         self.onStopped()  #activate the output of the box
@@ -2162,7 +2169,16 @@ class MyClass(GeneratedClass):
             guess = [4.555153846740723, -0.45348554849624634]
             code = self.navigation_service.relocalizeInMap(guess)[0]
             self.logger.info(code)
-            #self.tts.say("Llegué al salón.")
+            self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
+            coordenadas = str(self.navigation_service.getRobotPositionInMap()[0])
+            coordenadasInicio = "[0.0, 0.0, 0.0]"
+            self.navigation_service.stopLocalization()
+            if (coordenadas == coordenadasInicio):
+                sentence = "Estoy perdido pero os hablaré del salón."
+                id = self.tts.post.say(str(sentence))
+            else:
+                sentence = "Llegué al salón."
+                id = self.tts.post.say(str(sentence))
             time.sleep(0.5)
             self.logger.info("Girando")
             time.sleep(0.5)
@@ -2172,9 +2188,6 @@ class MyClass(GeneratedClass):
             theta  = math.pi
             self.motion_service.moveTo(x, y, theta)
 
-
-        # Check where the robot arrived
-        self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
 
         self.navigation_service.stopLocalization()
         self.onStopped()  #activate the output of the box
@@ -2255,7 +2268,16 @@ class MyClass(GeneratedClass):
             guess = [5.8866753578186035, -3.2829692363739014]
             code = self.navigation_service.relocalizeInMap(guess)[0]
             self.logger.info(code)
-            #self.tts.say("Llegué al dormitorio.")
+            self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
+            coordenadas = str(self.navigation_service.getRobotPositionInMap()[0])
+            coordenadasInicio = "[0.0, 0.0, 0.0]"
+            self.navigation_service.stopLocalization()
+            if (coordenadas == coordenadasInicio):
+                sentence = "Estoy perdido pero os hablaré del dormitorio."
+                id = self.tts.post.say(str(sentence))
+            else:
+                sentence = "Llegué al dormitorio."
+                id = self.tts.post.say(str(sentence))
             time.sleep(0.5)
             self.logger.info("Girando")
             time.sleep(0.5)
@@ -2267,17 +2289,147 @@ class MyClass(GeneratedClass):
         time.sleep(0.5)
 
 
-
-        # Check where the robot arrived
-        self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
-
         self.navigation_service.stopLocalization()
         self.onStopped()  #activate the output of the box
         pass
 
     def onInput_onStop(self):
         self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
-        pass]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /></Box><Link inputowner="3" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="3" outputowner="35" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="5" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="6" indexofoutput="4" /><Link inputowner="7" indexofinput="2" outputowner="6" indexofoutput="3" /><Link inputowner="0" indexofinput="4" outputowner="7" indexofoutput="4" /><Link inputowner="8" indexofinput="2" outputowner="2" indexofoutput="3" /><Link inputowner="1" indexofinput="2" outputowner="8" indexofoutput="4" /><Link inputowner="2" indexofinput="2" outputowner="3" indexofoutput="3" /><Link inputowner="10" indexofinput="2" outputowner="1" indexofoutput="3" /><Link inputowner="4" indexofinput="2" outputowner="10" indexofoutput="4" /><Link inputowner="35" indexofinput="2" outputowner="7" indexofoutput="3" /><Link inputowner="12" indexofinput="2" outputowner="4" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="12" indexofoutput="4" /><Link inputowner="9" indexofinput="2" outputowner="5" indexofoutput="3" /><Link inputowner="6" indexofinput="2" outputowner="9" indexofoutput="4" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box><Box name="Wait (1)" id="4" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="86" y="218"><bitmap>media/images/box/wait.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+        pass]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /></Box><Box name="People Tracker" id="11" localization="-1" tooltip="This box makes the robot track people with different modes." x="263" y="383"><bitmap>media/images/box/interaction/target_face.png</bitmap><script language="4"><content><![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.tracker = ALProxy( "ALTracker" )
+        self.memory = ALProxy("ALMemory")
+        self.targetName = "People"
+        self.distanceX = 0.0
+        self.distanceY = 0.0
+        self.angleWz = 0.0
+        self.thresholdX = 0.0
+        self.thresholdY = 0.0
+        self.thresholdWz = 0.0
+        self.effector = "None"
+        self.subscribeDone = False
+        self.isRunning = False
+
+    def onLoad(self):
+        self.BIND_PYTHON(self.getName(), "setParameter")
+        self.BIND_PYTHON(self.getName(), "onTargetLost")
+        self.BIND_PYTHON(self.getName(), "onTargetReached")
+        self.BIND_PYTHON(self.getName(), "onTargetChanged")
+        self.memory.subscribeToEvent("ALTracker/ActiveTargetChanged", self.getName(), "onTargetChanged")
+
+    def onUnload(self):
+        if self.subscribeDone:
+            self.memory.unsubscribeToEvent("ALTracker/TargetLost", self.getName())
+            self.memory.unsubscribeToEvent("ALTracker/TargetReached", self.getName())
+            self.subscribeDone = False
+
+        if self.isRunning:
+            self.tracker.setEffector("None")
+            self.tracker.stopTracker()
+            self.tracker.unregisterTarget(self.targetName)
+            self.isRunning = False
+
+    def onInput_onStart(self):
+        self.memory.subscribeToEvent("ALTracker/TargetLost", self.getName(), "onTargetLost")
+        self.memory.subscribeToEvent("ALTracker/TargetReached", self.getName(), "onTargetReached")
+        self.subscribeDone = True
+
+        mode = self.getParameter("Mode")
+        self.distanceX = self.getParameter("Distance X (m)")
+        self.thresholdX = self.getParameter("Threshold X (m)")
+        self.distanceY = self.getParameter("Distance Y (m)")
+        self.thresholdY = self.getParameter("Threshold Y (m)")
+        self.angleWz = self.getParameter("Theta (rad)")
+        self.thresholdWz = self.getParameter("Threshold Theta (rad)")
+        self.effector = self.getParameter("Effector")
+
+        self.tracker.setEffector(self.effector)
+
+        peopleIds = []
+
+        self.tracker.registerTarget(self.targetName, peopleIds)
+        self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                           self.thresholdX, self.thresholdY, self.thresholdWz])
+        self.tracker.setMode(mode)
+
+        self.tracker.track(self.targetName) #Start tracker
+        self.isRunning = True
+
+    def onInput_onStop(self):
+        self.onStopped()
+        self.onUnload()
+
+    def onInput_peopleId(self, p):
+        if(p is None):
+            return
+
+        self.tracker.registerTarget(self.targetName, p)
+
+    def setParameter(self, parameterName, newValue):
+        GeneratedClass.setParameter(self, parameterName, newValue)
+        if (parameterName == 'Mode'):
+            self.tracker.setMode(newValue)
+            return
+
+        if (parameterName == "Distance X (m)"):
+            self.distanceX = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Distance Y (m)"):
+            self.distanceY = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Theta (rad)"):
+            self.angleWz = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Threshold X (m)"):
+            self.thresholdX = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Threshold Y (m)"):
+            self.thresholdY = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Threshold Theta (rad)"):
+            self.thresholdWz = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if(parameterName == "Effector"):
+            self.tracker.setEffector(newValue)
+            self.effector = newValue
+            return
+
+    def onTargetLost(self, key, value, message):
+        self.targetLost()
+
+    def onTargetReached(self, key, value, message):
+        self.targetReached()
+
+    def onTargetChanged(self, key, value, message):
+        if value == self.targetName and not self.subscribeDone:
+            self.memory.subscribeToEvent("ALTracker/TargetLost", self.getName(), "onTargetLost")
+            self.memory.subscribeToEvent("ALTracker/TargetReached", self.getName(), "onTargetReached")
+            self.subscribeDone = True
+        elif value != self.targetName and self.subscribeDone:
+            self.memory.unsubscribeToEvent("ALTracker/TargetLost", self.getName())
+            self.memory.unsubscribeToEvent("ALTracker/TargetReached", self.getName())
+            self.subscribeDone = False]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Input name="peopleId" type="0" type_size="1" nature="1" inner="0" tooltip="List of people id to track" id="4" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" /><Output name="targetLost" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when the target is lost." id="6" /><Output name="targetReached" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when the target is reached." id="7" /><Parameter name="Mode" inherits_from_parent="0" content_type="3" value="Head" default_value="Head" custom_choice="0" tooltip="Set tracker mode" id="8"><Choice value="Head" /><Choice value="WholeBody" /><Choice value="Move" /></Parameter><Parameter name="Effector" inherits_from_parent="0" content_type="3" value="None" default_value="None" custom_choice="0" tooltip="Set effector to use for tracking. Head is always used." id="9"><Choice value="None" /><Choice value="Arms" /><Choice value="LArm" /><Choice value="RArm" /></Parameter><Parameter name="Distance X (m)" inherits_from_parent="0" content_type="2" value="0.3" default_value="0.3" min="0.01" max="5" tooltip="Distance on X axis the robot will try to maintain from its target in move modes." id="10" /><Parameter name="Threshold X (m)" inherits_from_parent="0" content_type="2" value="0.1" default_value="0.1" min="0.01" max="1" tooltip="Threshold above which the robot will move to track its target in move modes." id="11" /><Parameter name="Distance Y (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-5" max="5" tooltip="Distance on Y axis the robot will try to maintain from its target in move modes." id="12" /><Parameter name="Threshold Y (m)" inherits_from_parent="0" content_type="2" value="0.1" default_value="0.1" min="0.01" max="1" tooltip="Threshold above which the robot will move to track its target in move modes." id="13" /><Parameter name="Theta (rad)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-3.14" max="3.14" tooltip="Wz angle of the vector robot-target the robot will try to maintain in move modes." id="14" /><Parameter name="Threshold Theta (rad)" inherits_from_parent="0" content_type="2" value="0.3" default_value="0.3" min="0.01" max="3.14" tooltip="Threshold of the angle of the vector robot-target above which the robot will move to track its target in move modes." id="15" /></Box><Link inputowner="3" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="3" outputowner="35" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="5" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="6" indexofoutput="4" /><Link inputowner="7" indexofinput="2" outputowner="6" indexofoutput="3" /><Link inputowner="0" indexofinput="4" outputowner="7" indexofoutput="4" /><Link inputowner="8" indexofinput="2" outputowner="2" indexofoutput="3" /><Link inputowner="2" indexofinput="2" outputowner="3" indexofoutput="3" /><Link inputowner="10" indexofinput="2" outputowner="1" indexofoutput="3" /><Link inputowner="4" indexofinput="2" outputowner="10" indexofoutput="4" /><Link inputowner="35" indexofinput="2" outputowner="7" indexofoutput="3" /><Link inputowner="12" indexofinput="2" outputowner="4" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="12" indexofoutput="4" /><Link inputowner="9" indexofinput="2" outputowner="5" indexofoutput="3" /><Link inputowner="6" indexofinput="2" outputowner="9" indexofoutput="4" /><Link inputowner="11" indexofinput="2" outputowner="8" indexofoutput="4" /><Link inputowner="1" indexofinput="2" outputowner="11" indexofoutput="5" /><Link inputowner="1" indexofinput="2" outputowner="11" indexofoutput="6" /><Link inputowner="1" indexofinput="2" outputowner="11" indexofoutput="7" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box><Box name="Wait (1)" id="4" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="86" y="218"><bitmap>media/images/box/wait.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
     def __init__(self):
         GeneratedClass.__init__(self, False)
 
@@ -2487,7 +2639,13 @@ class MyClass(GeneratedClass):
             guess = [-0.8541533350944519, 0.07912316173315048]
             code = self.navigation_service.relocalizeInMap(guess)[0]
             self.logger.info(code)
-            #self.tts.say("Llegué al dormitorio.")
+            self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
+            coordenadas = str(self.navigation_service.getRobotPositionInMap()[0])
+            coordenadasInicio = "[0.0, 0.0, 0.0]"
+            self.navigation_service.stopLocalization()
+            if (coordenadas == coordenadasInicio):
+                sentence = "Estoy perdido y quiero ir a la entrada."
+                id = self.tts.post.say(str(sentence))
             time.sleep(0.5)
             self.logger.info("Girando")
             time.sleep(0.5)
@@ -2499,10 +2657,6 @@ class MyClass(GeneratedClass):
 
         time.sleep(0.5)
 
-
-
-        # Check where the robot arrived
-        self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
 
 
         self.navigation_service.stopLocalization()
@@ -2588,11 +2742,15 @@ class MyClass(GeneratedClass):
             code = self.navigation_service.relocalizeInMap(guess)[0]
             self.logger.info(code)
             self.logger.info("He alcanzado " + str(self.navigation_service.getRobotPositionInMap()[0]))
-
+            coordenadas = str(self.navigation_service.getRobotPositionInMap()[0])
+            coordenadasInicio = "[0.0, 0.0, 0.0]"
             self.navigation_service.stopLocalization()
-
-            sentence = "Llegué a la puerta."
-            id = self.tts.post.say(str(sentence))
+            if (coordenadas == coordenadasInicio):
+                sentence = "Estoy perdido pero os hablaré de la entrada."
+                id = self.tts.post.say(str(sentence))
+            else:
+                sentence = "Llegué a la entrada."
+                id = self.tts.post.say(str(sentence))
             time.sleep(0.5)
             self.logger.info("Girando")
             import math
@@ -2667,4 +2825,164 @@ class MyClass(GeneratedClass):
 
 	def onInput_onStart(self):
 		sDefaultLang = self.tts.getLanguage()
-		self.onStopped(self.sentences[sDefaultLang])]]></content></script><pluginContent><arabic><![CDATA[هل تحب الشوكولاته؟]]></arabic><czech><![CDATA[Máš rád čokoládu?]]></czech><danish><![CDATA[Kan du lide chokolade?]]></danish><german><![CDATA[Mögen Sie Schokolade?]]></german><greek><![CDATA[]]></greek><english><![CDATA[Hemos terminado la presentación, ¿Quieres repetirla?]]></english><spanish><![CDATA[Hemos terminado la presentación, ¿Quieres repetirla?]]></spanish><finnish><![CDATA[Pidätkö suklaasta?]]></finnish><french><![CDATA[Aimes-tu le chocolat ?]]></french><italian><![CDATA[Ti piace il cioccolato?]]></italian><japanese><![CDATA[チョコレートが好きですか]]></japanese><korean><![CDATA[당신은 초콜렛을 좋아합니까?]]></korean><dutch><![CDATA[Hou je van chocolade?]]></dutch><norwegian><![CDATA[]]></norwegian><polish><![CDATA[Lubisz czekoladę?]]></polish><brazilian><![CDATA[Você gosta de chocolate?]]></brazilian><portuguese><![CDATA[Gostas de chocolate?]]></portuguese><russian><![CDATA[Вы любите шоколад?]]></russian><swedish><![CDATA[Gillar du choklad?]]></swedish><turkish><![CDATA[Çikolata sever misin?]]></turkish><chinese><![CDATA[你喜欢吃巧克力吗？]]></chinese><mandarintaiwan><![CDATA[你喜歡吃巧克力嗎？]]></mandarintaiwan><language>6</language></pluginContent><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" /><Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Data sent when asked." id="3" /></Box><Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="5" /><Link inputowner="0" indexofinput="5" outputowner="1" indexofoutput="6" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="7" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="8" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box><Link inputowner="3" indexofinput="2" outputowner="6" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="19" indexofoutput="4" /><Link inputowner="4" indexofinput="2" outputowner="19" indexofoutput="3" /><Link inputowner="19" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="6" indexofinput="2" outputowner="18" indexofoutput="4" /><Link inputowner="14" indexofinput="2" outputowner="2" indexofoutput="4" /><Link inputowner="18" indexofinput="2" outputowner="14" indexofoutput="4" /><Link inputowner="2" indexofinput="2" outputowner="4" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="12" indexofoutput="4" /><Link inputowner="12" indexofinput="2" outputowner="3" indexofoutput="4" /><Link inputowner="6" indexofinput="2" outputowner="1" indexofoutput="4" /><Link inputowner="5" indexofinput="2" outputowner="6" indexofoutput="3" /><Link inputowner="3" indexofinput="2" outputowner="5" indexofoutput="4" /><Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="5" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box></ChoregrapheProject>
+		self.onStopped(self.sentences[sDefaultLang])]]></content></script><pluginContent><arabic><![CDATA[هل تحب الشوكولاته؟]]></arabic><czech><![CDATA[Máš rád čokoládu?]]></czech><danish><![CDATA[Kan du lide chokolade?]]></danish><german><![CDATA[Mögen Sie Schokolade?]]></german><greek><![CDATA[]]></greek><english><![CDATA[Hemos terminado la presentación, ¿Quieres repetirla?]]></english><spanish><![CDATA[Hemos terminado la presentación, ¿Quieres repetirla?]]></spanish><finnish><![CDATA[Pidätkö suklaasta?]]></finnish><french><![CDATA[Aimes-tu le chocolat ?]]></french><italian><![CDATA[Ti piace il cioccolato?]]></italian><japanese><![CDATA[チョコレートが好きですか]]></japanese><korean><![CDATA[당신은 초콜렛을 좋아합니까?]]></korean><dutch><![CDATA[Hou je van chocolade?]]></dutch><norwegian><![CDATA[]]></norwegian><polish><![CDATA[Lubisz czekoladę?]]></polish><brazilian><![CDATA[Você gosta de chocolate?]]></brazilian><portuguese><![CDATA[Gostas de chocolate?]]></portuguese><russian><![CDATA[Вы любите шоколад?]]></russian><swedish><![CDATA[Gillar du choklad?]]></swedish><turkish><![CDATA[Çikolata sever misin?]]></turkish><chinese><![CDATA[你喜欢吃巧克力吗？]]></chinese><mandarintaiwan><![CDATA[你喜歡吃巧克力嗎？]]></mandarintaiwan><language>6</language></pluginContent><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" /><Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Data sent when asked." id="3" /></Box><Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="5" /><Link inputowner="0" indexofinput="5" outputowner="1" indexofoutput="6" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="7" /><Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="8" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box><Box name="People Tracker" id="7" localization="-1" tooltip="This box makes the robot track people with different modes." x="191" y="107"><bitmap>media/images/box/interaction/target_face.png</bitmap><script language="4"><content><![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.tracker = ALProxy( "ALTracker" )
+        self.memory = ALProxy("ALMemory")
+        self.targetName = "People"
+        self.distanceX = 0.0
+        self.distanceY = 0.0
+        self.angleWz = 0.0
+        self.thresholdX = 0.0
+        self.thresholdY = 0.0
+        self.thresholdWz = 0.0
+        self.effector = "None"
+        self.subscribeDone = False
+        self.isRunning = False
+
+    def onLoad(self):
+        self.BIND_PYTHON(self.getName(), "setParameter")
+        self.BIND_PYTHON(self.getName(), "onTargetLost")
+        self.BIND_PYTHON(self.getName(), "onTargetReached")
+        self.BIND_PYTHON(self.getName(), "onTargetChanged")
+        self.memory.subscribeToEvent("ALTracker/ActiveTargetChanged", self.getName(), "onTargetChanged")
+
+    def onUnload(self):
+        if self.subscribeDone:
+            self.memory.unsubscribeToEvent("ALTracker/TargetLost", self.getName())
+            self.memory.unsubscribeToEvent("ALTracker/TargetReached", self.getName())
+            self.subscribeDone = False
+
+        if self.isRunning:
+            self.tracker.setEffector("None")
+            self.tracker.stopTracker()
+            self.tracker.unregisterTarget(self.targetName)
+            self.isRunning = False
+
+    def onInput_onStart(self):
+        self.memory.subscribeToEvent("ALTracker/TargetLost", self.getName(), "onTargetLost")
+        self.memory.subscribeToEvent("ALTracker/TargetReached", self.getName(), "onTargetReached")
+        self.subscribeDone = True
+
+        mode = self.getParameter("Mode")
+        self.distanceX = self.getParameter("Distance X (m)")
+        self.thresholdX = self.getParameter("Threshold X (m)")
+        self.distanceY = self.getParameter("Distance Y (m)")
+        self.thresholdY = self.getParameter("Threshold Y (m)")
+        self.angleWz = self.getParameter("Theta (rad)")
+        self.thresholdWz = self.getParameter("Threshold Theta (rad)")
+        self.effector = self.getParameter("Effector")
+
+        self.tracker.setEffector(self.effector)
+
+        peopleIds = []
+
+        self.tracker.registerTarget(self.targetName, peopleIds)
+        self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                           self.thresholdX, self.thresholdY, self.thresholdWz])
+        self.tracker.setMode(mode)
+
+        self.tracker.track(self.targetName) #Start tracker
+        self.isRunning = True
+
+    def onInput_onStop(self):
+        self.onStopped()
+        self.onUnload()
+
+    def onInput_peopleId(self, p):
+        if(p is None):
+            return
+
+        self.tracker.registerTarget(self.targetName, p)
+
+    def setParameter(self, parameterName, newValue):
+        GeneratedClass.setParameter(self, parameterName, newValue)
+        if (parameterName == 'Mode'):
+            self.tracker.setMode(newValue)
+            return
+
+        if (parameterName == "Distance X (m)"):
+            self.distanceX = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Distance Y (m)"):
+            self.distanceY = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Theta (rad)"):
+            self.angleWz = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Threshold X (m)"):
+            self.thresholdX = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Threshold Y (m)"):
+            self.thresholdY = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if (parameterName == "Threshold Theta (rad)"):
+            self.thresholdWz = newValue
+            self.tracker.setRelativePosition([-self.distanceX, self.distanceY, self.angleWz,
+                                               self.thresholdX, self.thresholdY, self.thresholdWz])
+            return
+
+        if(parameterName == "Effector"):
+            self.tracker.setEffector(newValue)
+            self.effector = newValue
+            return
+
+    def onTargetLost(self, key, value, message):
+        self.targetLost()
+
+    def onTargetReached(self, key, value, message):
+        self.targetReached()
+
+    def onTargetChanged(self, key, value, message):
+        if value == self.targetName and not self.subscribeDone:
+            self.memory.subscribeToEvent("ALTracker/TargetLost", self.getName(), "onTargetLost")
+            self.memory.subscribeToEvent("ALTracker/TargetReached", self.getName(), "onTargetReached")
+            self.subscribeDone = True
+        elif value != self.targetName and self.subscribeDone:
+            self.memory.unsubscribeToEvent("ALTracker/TargetLost", self.getName())
+            self.memory.unsubscribeToEvent("ALTracker/TargetReached", self.getName())
+            self.subscribeDone = False]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Input name="peopleId" type="0" type_size="1" nature="1" inner="0" tooltip="List of people id to track" id="4" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" /><Output name="targetLost" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when the target is lost." id="6" /><Output name="targetReached" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when the target is reached." id="7" /><Parameter name="Mode" inherits_from_parent="0" content_type="3" value="Head" default_value="Head" custom_choice="0" tooltip="Set tracker mode" id="8"><Choice value="Head" /><Choice value="WholeBody" /><Choice value="Move" /></Parameter><Parameter name="Effector" inherits_from_parent="0" content_type="3" value="None" default_value="None" custom_choice="0" tooltip="Set effector to use for tracking. Head is always used." id="9"><Choice value="None" /><Choice value="Arms" /><Choice value="LArm" /><Choice value="RArm" /></Parameter><Parameter name="Distance X (m)" inherits_from_parent="0" content_type="2" value="0.3" default_value="0.3" min="0.01" max="5" tooltip="Distance on X axis the robot will try to maintain from its target in move modes." id="10" /><Parameter name="Threshold X (m)" inherits_from_parent="0" content_type="2" value="0.1" default_value="0.1" min="0.01" max="1" tooltip="Threshold above which the robot will move to track its target in move modes." id="11" /><Parameter name="Distance Y (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-5" max="5" tooltip="Distance on Y axis the robot will try to maintain from its target in move modes." id="12" /><Parameter name="Threshold Y (m)" inherits_from_parent="0" content_type="2" value="0.1" default_value="0.1" min="0.01" max="1" tooltip="Threshold above which the robot will move to track its target in move modes." id="13" /><Parameter name="Theta (rad)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-3.14" max="3.14" tooltip="Wz angle of the vector robot-target the robot will try to maintain in move modes." id="14" /><Parameter name="Threshold Theta (rad)" inherits_from_parent="0" content_type="2" value="0.3" default_value="0.3" min="0.01" max="3.14" tooltip="Threshold of the angle of the vector robot-target above which the robot will move to track its target in move modes." id="15" /></Box><Box name="Wait" id="8" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="346" y="213"><bitmap>media/images/box/wait.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.waiting = None
+
+    def onUnload(self):
+        self.cancelWaiting()
+
+    def triggerOutput(self):
+        self.timerOutput()
+
+    def cancelWaiting(self):
+        if self.waiting:
+            self.waiting.cancel()
+        self.waiting = None
+
+    def onInput_onStart(self):
+        self.cancelWaiting()
+        import qi
+        self.waiting = qi.async(self.triggerOutput, delay=int(self.getParameter("Timeout (s)") * 1000 * 1000))
+
+    def onInput_onStop(self):
+        if self.getParameter("Trigger timerOutput if cancelled") and self.waiting and self.waiting.isRunning():
+            self.timerOutput()
+        self.onUnload()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Wait box with the configured timeout value." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" /><Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once time set in parameters is elapsed, or if the box is stopped and the appropriate parameter is set." id="4" /><Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="5" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" /><Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" /></Box><Link inputowner="3" indexofinput="2" outputowner="6" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="19" indexofoutput="4" /><Link inputowner="4" indexofinput="2" outputowner="19" indexofoutput="3" /><Link inputowner="19" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="6" indexofinput="2" outputowner="18" indexofoutput="4" /><Link inputowner="14" indexofinput="2" outputowner="2" indexofoutput="4" /><Link inputowner="18" indexofinput="2" outputowner="14" indexofoutput="4" /><Link inputowner="0" indexofinput="4" outputowner="12" indexofoutput="4" /><Link inputowner="12" indexofinput="2" outputowner="3" indexofoutput="4" /><Link inputowner="6" indexofinput="2" outputowner="1" indexofoutput="4" /><Link inputowner="5" indexofinput="2" outputowner="6" indexofoutput="3" /><Link inputowner="3" indexofinput="2" outputowner="5" indexofoutput="4" /><Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="5" /><Link inputowner="7" indexofinput="2" outputowner="4" indexofoutput="4" /><Link inputowner="8" indexofinput="2" outputowner="7" indexofoutput="5" /><Link inputowner="8" indexofinput="2" outputowner="7" indexofoutput="6" /><Link inputowner="8" indexofinput="2" outputowner="7" indexofoutput="7" /><Link inputowner="2" indexofinput="2" outputowner="8" indexofoutput="4" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box></ChoregrapheProject>

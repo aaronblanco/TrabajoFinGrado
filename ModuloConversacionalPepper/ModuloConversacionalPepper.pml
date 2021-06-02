@@ -4,10 +4,7 @@
     <BehaviorDescriptions>
         <BehaviorDescription name="behavior" src="behavior_1" xar="behavior.xar" />
     </BehaviorDescriptions>
-    <Dialogs>
-        <Dialog name="ExampleDialog" src="behavior_1/ExampleDialog/ExampleDialog.dlg" />
-        <Dialog name="entrada" src="entrada/entrada.dlg" />
-    </Dialogs>
+    <Dialogs />
     <Resources>
         <File name="index" src="html/entrance.html" />
         <File name="sensor" src="html/imagenes/sensor.jpg" />
@@ -35,11 +32,7 @@
         <File name="bathroom" src="html/bathroom.png" />
         <File name="livingroom" src="html/livingroom.png" />
     </Resources>
-    <Topics>
-        <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
-        <Topic name="ExampleDialog_spe" src="behavior_1/ExampleDialog/ExampleDialog_spe.top" topicName="ExampleDialog" language="es_ES" />
-        <Topic name="entrada_spe" src="entrada/entrada_spe.top" topicName="entrada" language="es_ES" />
-    </Topics>
+    <Topics />
     <IgnoredPaths />
     <Translations auto-fill="es_ES">
         <Translation name="translation_es_ES" src="translations/translation_es_ES.ts" language="es_ES" />
