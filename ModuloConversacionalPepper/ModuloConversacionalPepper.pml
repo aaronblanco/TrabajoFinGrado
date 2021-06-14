@@ -31,6 +31,9 @@
         <File name="kitchen" src="html/kitchen.png" />
         <File name="bathroom" src="html/bathroom.png" />
         <File name="livingroom" src="html/livingroom.png" />
+        <File name="bedroom" src="html/bedroom.png" />
+        <File name="classrom" src="html/classrom.png" />
+        <File name="standby" src="html/standby.png" />
     </Resources>
     <Topics />
     <IgnoredPaths />

@@ -53,6 +53,12 @@
             <comment>Text</comment>
             <translation></translation>
         </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Esto es una prueba.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Esto es una prueba.</translation>
+        </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Animated Say (2)</name>
@@ -66,6 +72,12 @@
             <comment>Text</comment>
             <translation type="obsolete">Tienes más preguntas.</translation>
         </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Prueba1</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Prueba1</translation>
+        </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Animated Say (3)</name>
@@ -78,6 +90,21 @@
             <source>¿Qué te gustaría saber?</source>
             <comment>Text</comment>
             <translation type="obsolete">¿Qué te gustaría saber?</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Prueba2</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Prueba2</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Animated Say (4)</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Apagar</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Apagar</translation>
         </message>
     </context>
     <context>

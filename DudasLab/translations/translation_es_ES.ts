@@ -9,10 +9,14 @@
             <translation type="vanished">Hola</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Esto es una prueba.</source>
             <comment>Text</comment>
-            <translation type="unfinished">Esto es una prueba.</translation>
+            <translation type="obsolete">Esto es una prueba.</translation>
+        </message>
+        <message>
+            <source>prueba uno</source>
+            <comment>Text</comment>
+            <translation type="obsolete">prueba uno</translation>
         </message>
     </context>
     <context>
@@ -23,10 +27,9 @@
             <translation type="vanished">Hola</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Prueba1</source>
             <comment>Text</comment>
-            <translation type="unfinished">Prueba1</translation>
+            <translation type="obsolete">Prueba1</translation>
         </message>
     </context>
     <context>
@@ -37,19 +40,44 @@
             <translation type="vanished">Hola</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Prueba2</source>
             <comment>Text</comment>
-            <translation type="unfinished">Prueba2</translation>
+            <translation type="obsolete">Prueba2</translation>
+        </message>
+        <message>
+            <source>Prueba</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Prueba</translation>
         </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Animated Say (3)</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Apagar</source>
             <comment>Text</comment>
-            <translation type="unfinished">Apagar</translation>
+            <translation type="obsolete">Apagar</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Explicacion_sensores</name>
+        <message>
+            <source>Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera.</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Existen distintos sensores, algunos de ellos son de localización, cámaras y la estación meteorológica. Estos nos sirven para localizarnos de manera qué podemos encender o apagar las luces o conocer el tiempo que hace fuera.</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Say</name>
+        <message>
+            <source>Hola</source>
+            <comment>Text</comment>
+            <translation type="vanished">Hola</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Encontré la televisión.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Encontré la televisión.</translation>
         </message>
     </context>
 </TS>
