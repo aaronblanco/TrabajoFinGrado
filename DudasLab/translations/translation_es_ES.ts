@@ -85,4 +85,18 @@
             <translation type="unfinished">Encontré el móvil.</translation>
         </message>
     </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Say (1)</name>
+        <message>
+            <source>Hola</source>
+            <comment>Text</comment>
+            <translation type="vanished">Hola</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hola Aaron</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Hola Aaron</translation>
+        </message>
+    </context>
 </TS>
