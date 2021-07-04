@@ -54,10 +54,15 @@
             <translation></translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Esto es una prueba.</source>
             <comment>Text</comment>
-            <translation type="unfinished">Esto es una prueba.</translation>
+            <translation type="obsolete">Esto es una prueba.</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>La nevera es una nevera LG de dos puertas, lo chulo de aquí es que puedes tocar el cristal y se iluminará para no tener qué abrirla y perder frío.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">La nevera es una nevera LG de dos puertas, lo chulo de aquí es que puedes tocar el cristal y se iluminará para no tener qué abrirla y perder frío.</translation>
         </message>
     </context>
     <context>
@@ -73,10 +78,9 @@
             <translation type="obsolete">Tienes más preguntas.</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Prueba1</source>
             <comment>Text</comment>
-            <translation type="unfinished">Prueba1</translation>
+            <translation type="obsolete">Prueba1</translation>
         </message>
     </context>
     <context>
@@ -92,19 +96,29 @@
             <translation type="obsolete">¿Qué te gustaría saber?</translation>
         </message>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Prueba2</source>
             <comment>Text</comment>
-            <translation type="unfinished">Prueba2</translation>
+            <translation type="obsolete">Prueba2</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Alexa es un dispositivo de procesamiento de voz, el cual puede atender nuestras peticiones como por ejemplo pedirle un chiste o subir o bajar la cama.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Alexa es un dispositivo de procesamiento de voz, el cual puede atender nuestras peticiones como por ejemplo pedirle un chiste o subir o bajar la cama.</translation>
         </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Animated Say (4)</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>Apagar</source>
             <comment>Text</comment>
-            <translation type="unfinished">Apagar</translation>
+            <translation type="obsolete">Apagar</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>La televisión es una sony de 42 pulgadas qué es capaz de conectarse a internet y guardar nuestras rutinas.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">La televisión es una sony de 42 pulgadas qué es capaz de conectarse a internet y guardar nuestras rutinas.</translation>
         </message>
     </context>
     <context>

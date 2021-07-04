@@ -99,4 +99,22 @@
             <translation type="unfinished">Hola Aaron</translation>
         </message>
     </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Say (2)</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Algo ha fallado</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Algo ha fallado</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Say (3)</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Adiós.</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Adiós.</translation>
+        </message>
+    </context>
 </TS>

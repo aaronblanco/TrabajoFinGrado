@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="dudaslab-36cecd" version="0.0.0">
+<package version="0.0.0" uuid="dudaslab-36cecd">
  <names>
   <name lang="en_US">Untitled</name>
-  <name lang="es_ES">DudasLaboratorio</name>
+  <name lang="es_ES">Complemento</name>
  </names>
  <descriptions>
-  <description lang="es_ES">App para resolver dudas que surjan sobre el laboratorio.</description>
+  <description lang="es_ES">Complemento qué muestra el reconocimiento de objetos y de cara.</description>
  </descriptions>
  <supportedLanguages>
   <language>es_ES</language>
@@ -27,7 +27,7 @@
   </behaviorContent>
  </contents>
  <requirements>
-  <naoqiRequirement maxVersion="2.5" minVersion="2.5"/>
+  <naoqiRequirement minVersion="2.5" maxVersion="2.5"/>
   <robotRequirement model="JULIETTE_Y20"/>
  </requirements>
 </package>
